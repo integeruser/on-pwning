@@ -6,6 +6,7 @@ This repository contains interesting links/notes about pwning stuff and my solut
 - [s-rand.py](https://gist.github.com/integeruser/4cca768836c68751904fe215c94e914c) • Python port of the GLIBC rng
 - [GDB Cheat Sh*t](https://gist.github.com/integeruser/0c436a64e087b1c43b278761434cbbfa) • A summary of the official GDB documentation
 - [exit-on-EOF.c](https://gist.github.com/integeruser/f6df45e1e0f05787d7799fe54af98b85) • Preload read() to exit() on EOF
+- [Google CTF 2017 (Quals) Write-Up: Inst Prof](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/)
 - [FAUST CTF 2017 Write-Up: Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/)
 - [AlexCTF 2017 Write-Up: Packed Movement](https://secgroup.github.io/2017/02/06/alexctf2017-writeup-packed-movement/)
 - [CSAW 2016 CTF Write-Up: Tutorial](https://secgroup.github.io/2016/09/24/csaw2016-writeup-tutorial/)
@@ -24,6 +25,7 @@ This repository contains interesting links/notes about pwning stuff and my solut
 - [How to Create a Virus Using the Assembly Language](https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/)
 - [linux-insides](https://0xax.gitbooks.io/linux-insides/)
 - [Playing with canaries](https://www.elttam.com.au/blog/playing-with-canaries/)
+- [Qualys Security Advisory - The Stack Clash](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
 - [Radare2 of the Lost Magic Gadget](https://0xabe.io/howto/exploit/2016/03/30/Radare2-of-the-Lost-Magic-Gadget.html)
 - [Return to VDSO using ELF Auxiliary Vectors](http://v0ids3curity.blogspot.it/2014/12/return-to-vdso-using-elf-auxiliary.html)
 - [The advanced return-into-lib(c) exploits: PaX case study](http://phrack.org/issues/58/4.html) • ret-into-dl
@@ -59,5 +61,6 @@ This repository contains interesting links/notes about pwning stuff and my solut
 - [Hack.lu's OREO with ret2dl-resolve](http://wapiflapi.github.io/2014/11/17/hacklu-oreo-with-ret2dl-resolve/)
 - [Hohoho](https://github.com/InfoSecIITR/write-ups/tree/master/2016/33c3-ctf-2016/misc/hohoho) • bash
 - [Nebula level15 write-up](http://www.pwntester.com/blog/2013/11/26/nebula-level15-write-up/) • RPATH
+- [Play With Capture The Flag: [Write-up] Google CTF 2017 - pwn474 primary](https://david942j.blogspot.it/2017/06/write-up-google-ctf-2017-pwn474-primary.html)
 - [POC exploit for toilet service of FAUST-CTF-2017](https://gist.github.com/m1ghtym0/44a4bdf7621fa60ac8ec69f10b8af5f4)
 - [RingZer0Team - Shellcoding](https://github.com/VulnHub/ctf-writeups/blob/master/2015/ringzer0/shellcoding.md)
