@@ -1,16 +1,21 @@
 # on-pwning
 This repository contains interesting links/notes about pwning stuff and my solutions to some CTF challenges.
 
-- [wrapper.py](https://gist.github.com/integeruser/dcf2d1a290db1811e8a26cd7b22e919b) • Normalize environment when running a program with and without GDB
-- [ashell.py](https://gist.github.com/integeruser/0c87f46f82d40a36e6a9901059f09ffd) • A shellcoding helper
-- [s-rand.py](https://gist.github.com/integeruser/4cca768836c68751904fe215c94e914c) • Python port of the GLIBC rng
-- [GDB Cheat Sh*t](https://gist.github.com/integeruser/0c436a64e087b1c43b278761434cbbfa) • A summary of the official GDB documentation
-- [exit-on-EOF.c](https://gist.github.com/integeruser/f6df45e1e0f05787d7799fe54af98b85) • Preload read() to exit() on EOF
-- [Google CTF 2017 (Quals) Write-Up: Inst Prof](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/)
-- [FAUST CTF 2017 Write-Up: Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/)
-- [AlexCTF 2017 Write-Up: Packed Movement](https://secgroup.github.io/2017/02/06/alexctf2017-writeup-packed-movement/)
-- [CSAW 2016 CTF Write-Up: Tutorial](https://secgroup.github.io/2016/09/24/csaw2016-writeup-tutorial/)
-- [Hack.lu 2015 CTF Write-Up: Secret Library](https://secgroup.github.io/2015/10/25/hacklu2015-writeup-secret-library/)
+|||
+|-|-|
+| [wrapper.py](https://gist.github.com/integeruser/dcf2d1a290db1811e8a26cd7b22e919b) | Normalize environment when running a program with and without GDB |
+| [ashell.py](https://gist.github.com/integeruser/0c87f46f82d40a36e6a9901059f09ffd) | A shellcoding helper |
+| [s-rand.py](https://gist.github.com/integeruser/4cca768836c68751904fe215c94e914c) | Python port of the GLIBC rng |
+| [GDB Cheat Sh*t](https://gist.github.com/integeruser/0c436a64e087b1c43b278761434cbbfa) | A summary of the official GDB documentation |
+| [exit-on-EOF.c](https://gist.github.com/integeruser/f6df45e1e0f05787d7799fe54af98b85) | Preload read() to exit() on EOF |
+
+||
+|-|
+| [Google CTF 2017 (Quals) Write-Up: Inst Prof](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/) |
+| [FAUST CTF 2017 Write-Up: Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/) |
+| [AlexCTF 2017 Write-Up: Packed Movement](https://secgroup.github.io/2017/02/06/alexctf2017-writeup-packed-movement/) |
+| [CSAW 2016 CTF Write-Up: Tutorial](https://secgroup.github.io/2016/09/24/csaw2016-writeup-tutorial/) |
+| [Hack.lu 2015 CTF Write-Up: Secret Library](https://secgroup.github.io/2015/10/25/hacklu2015-writeup-secret-library/) |
 
 
 ## Readings
