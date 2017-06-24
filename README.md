@@ -9,13 +9,13 @@ This repository contains interesting links/notes about pwning stuff and my solut
 | [GDB Cheat Sh*t](https://gist.github.com/integeruser/0c436a64e087b1c43b278761434cbbfa) | A summary of the official GDB documentation |
 | [exit-on-EOF.c](https://gist.github.com/integeruser/f6df45e1e0f05787d7799fe54af98b85) | Preload read() to exit() on EOF |
 
-||
-|-|
-| [Google CTF 2017 (Quals) Write-Up: Inst Prof](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/) |
-| [FAUST CTF 2017 Write-Up: Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/) |
-| [AlexCTF 2017 Write-Up: Packed Movement](https://secgroup.github.io/2017/02/06/alexctf2017-writeup-packed-movement/) |
-| [CSAW 2016 CTF Write-Up: Tutorial](https://secgroup.github.io/2016/09/24/csaw2016-writeup-tutorial/) |
-| [Hack.lu 2015 CTF Write-Up: Secret Library](https://secgroup.github.io/2015/10/25/hacklu2015-writeup-secret-library/) |
+|||
+|-|-|
+| Google CTF 2017 (Quals) | [Inst Prof](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/) |
+| FAUST CTF 2017 | [Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/) |
+| AlexCTF 2017 | [Packed Movement](https://secgroup.github.io/2017/02/06/alexctf2017-writeup-packed-movement/) |
+| CSAW 2016 CTF | [Tutorial](https://secgroup.github.io/2016/09/24/csaw2016-writeup-tutorial/) |
+| Hack.lu 2015 CTF | [Secret Library](https://secgroup.github.io/2015/10/25/hacklu2015-writeup-secret-library/) |
 
 
 ## Readings
