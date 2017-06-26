@@ -1,5 +1,5 @@
 # on-pwning
-This repository contains interesting links/notes about pwning stuff and my solutions to some CTF challenges.
+This repository contains interesting links and notes about pwning stuff, along with my solutions to some CTF challenges.
 
 |||
 |-|-|
