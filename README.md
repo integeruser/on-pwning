@@ -7,7 +7,6 @@ This repository contains interesting links/notes about pwning stuff and my solut
 | [ashell.py](https://gist.github.com/integeruser/0c87f46f82d40a36e6a9901059f09ffd) | A shellcoding helper |
 | [s-rand.py](https://gist.github.com/integeruser/4cca768836c68751904fe215c94e914c) | Python port of the GLIBC rng |
 | [GDB Cheat Sh*t](https://gist.github.com/integeruser/0c436a64e087b1c43b278761434cbbfa) | A summary of the official GDB documentation |
-| [exit-on-EOF.c](https://gist.github.com/integeruser/f6df45e1e0f05787d7799fe54af98b85) | Preload read() to exit() on EOF |
 
 |||
 |-|-|
@@ -38,6 +37,7 @@ This repository contains interesting links/notes about pwning stuff and my solut
 - [The one-gadget in glibc](https://david942j.blogspot.it/2017/02/project-one-gadget-in-glibc.html)
 - [Unix ELF parasites and virus](http://vxheaven.org/lib/vsc01.html)
 - [Vudo - An object superstitiously believed to embody magical powers](http://www.phrack.org/issues/57/8.html) • dlmalloc, frontlink, heap, unlink
+- [What are vdso and vsyscall?](https://stackoverflow.com/questions/19938324/what-are-vdso-and-vsyscall)
 - [What is the difference between .got and .got.plt section?](https://stackoverflow.com/questions/11676472/what-is-the-difference-between-got-and-got-plt-section)
 - [What is this protection that seems to prevent ROP when ASLR in ON?](https://reverseengineering.stackexchange.com/questions/13811/what-is-this-protection-that-seems-to-prevent-rop-when-aslr-in-on)
 
