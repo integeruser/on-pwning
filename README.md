@@ -3,6 +3,7 @@ This repository contains interesting links and notes about pwning stuff, along w
 
 | Tool | Description |
 | -------- | ----------- |
+| [flags.py](https://gist.github.com/integeruser/90db09df45d18dcffa95f6635403a84b) | Retrieve back names of header file constants
 | [wrapper.py](https://gist.github.com/integeruser/dcf2d1a290db1811e8a26cd7b22e919b) | Normalize environment when running a program with and without GDB |
 | [ashell.py](https://gist.github.com/integeruser/0c87f46f82d40a36e6a9901059f09ffd) | A shellcoding helper |
 | [s-rand.py](https://gist.github.com/integeruser/4cca768836c68751904fe215c94e914c) | Python port of the GLIBC rng |
