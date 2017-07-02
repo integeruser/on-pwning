@@ -27,6 +27,7 @@ This repository contains interesting links and notes about pwning stuff, along w
 - [Controlling uninitialized memory with LD_PRELOAD](http://vulnfactory.org/blog/2010/04/08/controlling-uninitialized-memory-with-ld_preload/)
 - [Exploiting Format String Vulnerabilities](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
 - [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/)
+- [How main() is executed on Linux](http://www.tldp.org/LDP/LG/issue84/hawk.html)
 - [How to Create a Virus Using the Assembly Language](https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/)
 - [linux-insides](https://0xax.gitbooks.io/linux-insides/)
 - [Playing with canaries](https://www.elttam.com.au/blog/playing-with-canaries/)
@@ -47,6 +48,7 @@ This repository contains interesting links and notes about pwning stuff, along w
 
 - [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
 - [Educational Heap Exploitation](https://github.com/shellphish/how2heap)
+- [Exploit writing tutorial part 11 : Heap Spraying Demystified](https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#0x0c0c0c0c)
 - [Finding Function's Load Address](http://uaf.io/exploitation/misc/2016/04/02/Finding-Functions.html) • DT_STRTAB
 - [File Stream Pointer Overflows](http://www.ouah.org/fsp-overflows.txt)
 - [Fun with FORTIFY_SOURCE](http://vulnfactory.org/blog/2010/04/27/fun-with-fortify_source/)
