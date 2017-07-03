@@ -23,6 +23,7 @@ This repository contains interesting links and notes about pwning stuff, along w
 - [A binary analysis, count me if you can](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/)
 - [A Eulogy for Format Strings](http://phrack.org/issues/67/9.html)
 - [A Memory Allocator](http://g.oswego.edu/dl/html/malloc.html)
+- [Collection of Known Patching Techniques](https://github.com/secretsquirrel/the-backdoor-factory/wiki/5.-Collection-of-Known-Patching-Techniques) • elf
 - [Common Pitfalls When Writing Exploits](http://www.mathyvanhoef.com/2012/11/common-pitfalls-when-writing-exploits.html)
 - [Controlling uninitialized memory with LD_PRELOAD](http://vulnfactory.org/blog/2010/04/08/controlling-uninitialized-memory-with-ld_preload/)
 - [Exploiting Format String Vulnerabilities](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
@@ -58,6 +59,16 @@ This repository contains interesting links and notes about pwning stuff, along w
 - [The Malloc Maleficarum](http://packetstorm.foofus.com/papers/attack/MallocMaleficarum.txt)
 - [What is vulnerable about this C code?](http://stackoverflow.com/questions/8304396/what-is-vulnerable-about-this-c-code) • env
 - [x86 Exploitation 101: heap overflows… unlink me, would you please?](https://gbmaster.wordpress.com/2014/08/11/x86-exploitation-101-heap-overflows-unlink-me-would-you-please/) • dlmalloc, heap, unlink
+
+
+## Talks
+
+- [Black Hat USA 2002 - Fixing/Making Holes in Binaries](https://www.youtube.com/watch?v=18DKETYfvjg)
+
+
+## Tools
+
+- [The Backdoor Factory](https://github.com/secretsquirrel/the-backdoor-factory)
 
 
 ## Tips and tricks
