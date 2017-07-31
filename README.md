@@ -30,6 +30,7 @@ This repository contains interesting links and notes about pwning stuff, along w
 - [Exploiting Format String Vulnerabilities](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
 - [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/)
 - [How main() is executed on Linux](http://www.tldp.org/LDP/LG/issue84/hawk.html)
+- [How the ELF Ruined Christmas](https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-di-frederico.pdf)
 - [How to Create a Virus Using the Assembly Language](https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/)
 - [linux-insides](https://0xax.gitbooks.io/linux-insides/)
 - [Playing with canaries](https://www.elttam.com.au/blog/playing-with-canaries/)
@@ -55,6 +56,7 @@ This repository contains interesting links and notes about pwning stuff, along w
 - [File Stream Pointer Overflows](http://www.ouah.org/fsp-overflows.txt)
 - [Fun with FORTIFY_SOURCE](http://vulnfactory.org/blog/2010/04/27/fun-with-fortify_source/)
 - [Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html) • free, heap, unlink
+- [Playing with signals : An overview on Sigreturn Oriented Programming](https://thisissecurity.net/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
 - [Pwning (sometimes) with style - Dragons' notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf)
 - [pwnlib.dynelf — Resolving remote functions using leaks](https://docs.pwntools.com/en/stable/dynelf.html)
 - [The Malloc Maleficarum](http://packetstorm.foofus.com/papers/attack/MallocMaleficarum.txt)
