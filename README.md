@@ -49,6 +49,8 @@ This repository contains interesting links and notes about pwning stuff, along w
 
 ## Exploits
 
+- [Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets | Exodus Intelligence](https://blog.exodusintel.com/2017/07/26/broadpwn/)
+- ["Bypassing" Microsoft's Patch for CVE-2017-0199](http://justhaifei1.blogspot.it/2017/07/bypassing-microsofts-cve-2017-0199-patch.html?m=1)
 - [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
 - [Educational Heap Exploitation](https://github.com/shellphish/how2heap)
 - [Exploit writing tutorial part 11 : Heap Spraying Demystified](https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#0x0c0c0c0c)
@@ -57,6 +59,7 @@ This repository contains interesting links and notes about pwning stuff, along w
 - [Fun with FORTIFY_SOURCE](http://vulnfactory.org/blog/2010/04/27/fun-with-fortify_source/)
 - [Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html) • free, heap, unlink
 - [Playing with signals : An overview on Sigreturn Oriented Programming](https://thisissecurity.net/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
+- [Pwn2Own: Safari sandbox part 2 – Wrap your way around to root](https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape)
 - [Pwning (sometimes) with style - Dragons' notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf)
 - [pwnlib.dynelf — Resolving remote functions using leaks](https://docs.pwntools.com/en/stable/dynelf.html)
 - [The Malloc Maleficarum](http://packetstorm.foofus.com/papers/attack/MallocMaleficarum.txt)
