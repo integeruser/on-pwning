@@ -67,6 +67,8 @@ This repository contains interesting links and notes about pwning stuff, along w
 ## Talks
 
 - [Black Hat USA 2002 - Fixing/Making Holes in Binaries](https://www.youtube.com/watch?v=18DKETYfvjg)
+- [Black Hat USA 2016 - Behind the Scenes with iOS Security](https://www.youtube.com/watch?v=BLGFriOKz6U)
+- [Black Hat USA 2017 - Breaking the x86 Instruction Set](https://www.youtube.com/watch?v=KrksBdWcZgQ)
 
 
 ## Tools
@@ -87,6 +89,8 @@ This repository contains interesting links and notes about pwning stuff, along w
 
 - [0ctf Quals 2017 - BabyHeap2017](http://uaf.io/exploitation/2017/03/19/0ctf-Quals-2017-BabyHeap2017.html) • fastbins
 - [33C3 CTF – babyfengshui](https://galhacktictrendsetters.wordpress.com/2017/01/05/33c3-ctf-babyfengshui/)
+- [CSAW '17 PWN - Auir (200pt)](https://glennmcgui.re/csaw-17-auir/)
+- [CSAW Quals 2017: Zone Writeup](https://amritabi0s.wordpress.com/2017/09/18/csaw-quals-2017-zone-writeup/)
 - [Exploit Exercise - Format String FORTIFY_SOURCE Bypass](http://v0ids3curity.blogspot.it/2012/09/exploit-exercise-format-string.html) • FORTIFY_SOURCE
 - [exploit exercises - protostar - heap levels | research | sprawl](http://thesprawl.org/research/exploit-exercises-protostar-heap/#heap-3)
 - [Hack.lu's OREO with ret2dl-resolve](http://wapiflapi.github.io/2014/11/17/hacklu-oreo-with-ret2dl-resolve/)
