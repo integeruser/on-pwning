@@ -1,7 +1,5 @@
 # on-pwning
-This repository contains my solutions and write-ups to some CTF challenges.
-
-Links and interesting stuff moved to [https://integeruser.github.io/on-pwning](https://integeruser.github.io/on-pwning).
+This repository contains my solutions to some CTF challenges. You may also be interested in my [collection of links about pwning stuff](https://integeruser.github.io/on-pwning).
 
 | CTF | Write-up |
 | --- | -------- |
