@@ -30,11 +30,16 @@ else:
 # . . .
 # 06:0030│   0x7fffffffed30 —▸ 0x7fffffffed00 —▸ 0x7fffffffed08 ◂— 0x0
 
-# the idea for solving the challenge came from looking at this section of the stack:
-# we can access locations 0x7fffffffed00 and 0x7fffffffed30 through format strings
-# to write arbitrary values into 0x7fffffffed08 and e.g. successive addresses
+# the idea for solving the challenge came to me from looking at this section of the stack: 
+# we can access values 0x7fffffffed08 (at 0x7fffffffed00) and 0x7fffffffed00 (at 0x7fffffffed30) 
+# using direct parameter access in format strings to write arbitrary values at, for example, 
+# 0x7fffffffed08 and at the following addresses (0x7fffffffed08+0x8 and 0x7fffffffed08+0x10)
 
-# TL;DR
+# TL;DR 
+# it happens that a single format string vulnerability can be used to:
+# - modify a saved RBP in the stack to execute _start() when main() returns (thus executing main() again)
+# - write in the stack a small part of a ROP chain
+# this process can be repeated until the full chain is written and finally executed
 
 ###############################################################################
 
