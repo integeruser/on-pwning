@@ -5,7 +5,8 @@ This repository contains my solutions to some CTF challenges and a list of inter
 
 - [A binary analysis, count me if you can](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/)
 - [A Memory Allocator](http://g.oswego.edu/dl/html/malloc.html)
-- [About Exploits Writing](https://paper.seebug.org/papers/Archive/refs/2002.gera_.About_Exploits_Writing.pdf) •  [Collection of Known Patching Techniques](https://github.com/secretsquirrel/the-backdoor-factory/wiki/5.-Collection-of-Known-Patching-Techniques) • ELF
+- [About Exploits Writing](https://paper.seebug.org/papers/Archive/refs/2002.gera_.About_Exploits_Writing.pdf)
+- [Collection of Known Patching Techniques](https://github.com/secretsquirrel/the-backdoor-factory/wiki/5.-Collection-of-Known-Patching-Techniques) • ELF
 - [Common Pitfalls When Writing Exploits](http://www.mathyvanhoef.com/2012/11/common-pitfalls-when-writing-exploits.html)
 - [Controlling uninitialized memory with LD_PRELOAD](http://vulnfactory.org/blog/2010/04/08/controlling-uninitialized-memory-with-ld_preload/)
 - [Cross debugging for MIPS ELF with QEMU/toolchain](https://reverseengineering.stackexchange.com/questions/8829/cross-debugging-for-mips-elf-with-qemu-toolchain)
@@ -35,14 +36,17 @@ This repository contains my solutions to some CTF challenges and a list of inter
 
 ## Exploits
 
+- ["Bypassing" Microsoft's Patch for CVE-2017-0199](http://justhaifei1.blogspot.it/2017/07/bypassing-microsofts-cve-2017-0199-patch.html?m=1)
+- [AnC - VUSec](https://www.vusec.net/projects/anc/) • ASLR⊕Cache
 - [ArmisSecurity/blueborne: PoC scripts demonstrating the BlueBorne vulnerabilities](https://github.com/ArmisSecurity/blueborne)
 - [Attacking a co-hosted VM: A hacker, a hammer and two memory modules - This is Security :: by Stormshield](https://thisissecurity.stormshield.com/2017/10/19/attacking-co-hosted-vm-hacker-hammer-two-memory-modules/)
 - [Avast Antivirus: Remote Stack Buffer Overflow with Magic Numbers](https://landave.io/2017/06/avast-antivirus-remote-stack-buffer-overflow-with-magic-numbers/)
 - [Back to 28: Grub2 Authentication 0-Day](http://hmarco.org/bugs/CVE-2015-8370-Grub2-authentication-bypass.html)
-- ["Bypassing" Microsoft's Patch for CVE-2017-0199](http://justhaifei1.blogspot.it/2017/07/bypassing-microsofts-cve-2017-0199-patch.html?m=1)
+- [Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets \| Exodus Intelligence](https://blog.exodusintel.com/2017/07/26/broadpwn/)
 - [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
 - [Educational Heap Exploitation](https://github.com/shellphish/how2heap)
 - [Exploit writing tutorial part 11 : Heap Spraying Demystified](https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#0x0c0c0c0c)
+- [Exploiting the DRAM rowhammer bug to gain kernel privileges](https://googleprojectzero.blogspot.it/2015/03/exploiting-dram-rowhammer-bug-to-gain.html)
 - [fail0verflow :: The First PS4 Kernel Exploit: Adieu](https://fail0verflow.com/blog/2017/ps4-namedobj-exploit/)
 - [Finding Function's Load Address](http://uaf.io/exploitation/misc/2016/04/02/Finding-Functions.html) • DT_STRTAB
 - [File Stream Pointer Overflows](http://www.ouah.org/fsp-overflows.txt)
@@ -52,6 +56,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Kernel Pool Overflow Exploitation In Real World – Windows 10 \| TRACKWATCH](http://trackwatch.com/kernel-pool-overflow-exploitation-in-real-world-windows-10/)
 - [Linux/x86 - sockfd trick + dup2(0,0), dup2(0,1), dup2(0,2) + execve /bin/sh - 50 bytes](http://shell-storm.org/shellcode/files/shellcode-881.php)
 - [Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html) • free, heap, unlink
+- [Offset2lib: bypassing full ASLR on 64bit Linux](http://cybersecurity.upv.es/attacks/offset2lib/offset2lib.html)
 - [Playing with signals : An overview on Sigreturn Oriented Programming](https://thisissecurity.net/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
 - [Pwn2Own: Safari sandbox part 1 – Mount yourself a root shell](https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc)
 - [Pwn2Own: Safari sandbox part 2 – Wrap your way around to root](https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape)
