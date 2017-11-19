@@ -25,6 +25,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Qualys Security Advisory - The Stack Clash](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
 - [Radare2 of the Lost Magic Gadget](https://0xabe.io/howto/exploit/2016/03/30/Radare2-of-the-Lost-Magic-Gadget.html)
 - [Return to VDSO using ELF Auxiliary Vectors](http://v0ids3curity.blogspot.it/2014/12/return-to-vdso-using-elf-auxiliary.html)
+- [Reversing C++ programs with IDA pro and Hex-rays](https://blog.0xbadc0de.be/archives/67)
 - [The Art Of ELF: Analysis and Exploitations](http://fluxius.handgrep.se/2011/10/20/the-art-of-elf-analysises-and-exploitations/)
 - [The Chakra Exploit And The Limitations Of Modern Cyber Security Threat Mitigation Techniques](https://www.endgame.com/blog/technical-blog/chakra-exploit-and-limitations-modern-mitigation-techniques)
 - [The hacker known as "Alex" — Operation Luigi: How I hacked my friend without her noticing](https://defaultnamehere.tumblr.com/post/163734466355/operation-luigi-how-i-hacked-my-friend-without)
@@ -36,16 +37,20 @@ This repository contains my solutions to some CTF challenges and a list of inter
 
 ## Exploits
 
-- ["Bypassing" Microsoft's Patch for CVE-2017-0199](http://justhaifei1.blogspot.it/2017/07/bypassing-microsofts-cve-2017-0199-patch.html?m=1)
 - [AnC - VUSec](https://www.vusec.net/projects/anc/) • ASLR⊕Cache
 - [ArmisSecurity/blueborne: PoC scripts demonstrating the BlueBorne vulnerabilities](https://github.com/ArmisSecurity/blueborne)
 - [Attacking a co-hosted VM: A hacker, a hammer and two memory modules - This is Security :: by Stormshield](https://thisissecurity.stormshield.com/2017/10/19/attacking-co-hosted-vm-hacker-hammer-two-memory-modules/)
 - [Avast Antivirus: Remote Stack Buffer Overflow with Magic Numbers](https://landave.io/2017/06/avast-antivirus-remote-stack-buffer-overflow-with-magic-numbers/)
 - [Back to 28: Grub2 Authentication 0-Day](http://hmarco.org/bugs/CVE-2015-8370-Grub2-authentication-bypass.html)
+- [BlueBorne RCE on Android 6.0.1 (CVE-2017-0781) \[English\]](https://jesux.es/exploiting/blueborne-android-6.0.1-english/)
 - [Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets \| Exodus Intelligence](https://blog.exodusintel.com/2017/07/26/broadpwn/)
+- [Browser security beyond sandboxing &#8211; Windows Security blog](https://blogs.technet.microsoft.com/mmpc/2017/10/18/browser-security-beyond-sandboxing/)
+- ["Bypassing" Microsoft's Patch for CVE-2017-0199](http://justhaifei1.blogspot.it/2017/07/bypassing-microsofts-cve-2017-0199-patch.html?m=1)
+- [CY-2017-011: Type Confusion in Adobe Acrobat](https://cybellum.com/cy-2017-011-type-confusion-in-adobe-acrobat/)
 - [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
 - [Educational Heap Exploitation](https://github.com/shellphish/how2heap)
 - [Exploit writing tutorial part 11 : Heap Spraying Demystified](https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#0x0c0c0c0c)
+- [Exploiting CVE-2017-5123](https://reverse.put.as/2017/11/07/exploiting-cve-2017-5123/)
 - [Exploiting the DRAM rowhammer bug to gain kernel privileges](https://googleprojectzero.blogspot.it/2015/03/exploiting-dram-rowhammer-bug-to-gain.html)
 - [fail0verflow :: The First PS4 Kernel Exploit: Adieu](https://fail0verflow.com/blog/2017/ps4-namedobj-exploit/)
 - [Finding Function's Load Address](http://uaf.io/exploitation/misc/2016/04/02/Finding-Functions.html) • DT_STRTAB
@@ -58,6 +63,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html) • free, heap, unlink
 - [Offset2lib: bypassing full ASLR on 64bit Linux](http://cybersecurity.upv.es/attacks/offset2lib/offset2lib.html)
 - [Playing with signals : An overview on Sigreturn Oriented Programming](https://thisissecurity.net/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
+- [Please Stop Naming Vulnerabilities: Exploring 6 Previously Unknown Remote Kernel Bugs Affecting Android Phones](https://pleasestopnamingvulnerabilities.com)
 - [Pwn2Own: Safari sandbox part 1 – Mount yourself a root shell](https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc)
 - [Pwn2Own: Safari sandbox part 2 – Wrap your way around to root](https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape)
 - [Pwning (sometimes) with style - Dragons' notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf)
@@ -93,9 +99,11 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Attacking The XNU Kernel In El Capitan](https://www.youtube.com/watch?v=k550C0V79ts) • Black Hat Europe&nbsp;2015
 - [Behind the Scenes with iOS Security](https://www.youtube.com/watch?v=BLGFriOKz6U) • Black Hat USA&nbsp;2016
 - [Breaking the x86 Instruction Set](https://www.youtube.com/watch?v=KrksBdWcZgQ) • Black Hat USA&nbsp;2017
+- [Bypassing clang’s SafeStack for Fun and Profit](https://www.blackhat.com/docs/eu-16/materials/eu-16-Goktas-Bypassing-Clangs-SafeStack.pdf) • Black Hat Europe&nbsp;2016
 - [Fixing/Making Holes in Binaries](https://www.youtube.com/watch?v=18DKETYfvjg) • Black Hat USA&nbsp;2002
 - [Heap Feng Shui in JavaScript](https://www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf) • Black Hat Europe&nbsp;2007
 - [Infosec and failure](https://www.youtube.com/watch?v=erZ2JlfTtcE) by 杏👼Ąż • Hack.lu&nbsp;2017
+- [Practical C++ Decompilation](http://www.hexblog.com/wp-content/uploads/2011/08/Recon-2011-Skochinsky.pdf) • REcon&nbsp;2011
 - [Pwned By The Owner: What Happens When You Steal A Hacker's Computer](https://www.youtube.com/watch?v=Jwpg-AwJ0Jc) by Zoz • DEF&nbsp;CON&nbsp;18
 - [Unexpected Stories From a Hacker Inside the Government](https://www.youtube.com/watch?v=TSR-b9yuTbM) by Mudge • DEF&nbsp;CON&nbsp;21
 
@@ -114,6 +122,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Hack.lu's OREO with ret2dl-resolve](http://wapiflapi.github.io/2014/11/17/hacklu-oreo-with-ret2dl-resolve/)
 - [Hohoho](https://github.com/InfoSecIITR/write-ups/tree/master/2016/33c3-ctf-2016/misc/hohoho) • bash
 - [Nebula level15 write-up](http://www.pwntester.com/blog/2013/11/26/nebula-level15-write-up/) • RPATH
+- [\[Official Write-up\] HITCON CTF 2017 - pwn327 Real Ruby Escaping](https://david942j.blogspot.it/2017/11/official-write-up-hitcon-ctf-2017.html)
 - [Play With Capture The Flag: [Write-up] Google CTF 2017 - pwn474 primary](https://david942j.blogspot.it/2017/06/write-up-google-ctf-2017-pwn474-primary.html)
 - [RingZer0Team - Shellcoding](https://github.com/VulnHub/ctf-writeups/blob/master/2015/ringzer0/shellcoding.md)
 - [Tokyo Westerns MMA 2016 - Diary](http://uaf.io/exploitation/2016/09/06/TokyoWesterns-MMA-Diary.html) • seccomp
