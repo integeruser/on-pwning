@@ -17,6 +17,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [ELF Binary Code Injection, Loader/'Decrypter'](http://www.pinkstyle.org/elfcrypt.html)
 - [Exploiting Format String Vulnerabilities](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
 - [Fully undetectable backdooring PE files](https://haiderm.com/fully-undetectable-backdooring-pe-files/)
+- [GOT and PLT for pwning.](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
 - [Hardening C/C++ Programs Part II &#8211; Executable-Space Protection and ASLR &#8211; Productive C++](http://www.productive-cpp.com/hardening-cpp-programs-executable-space-protection-address-space-layout-randomization-aslr/)
 - [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/)
 - [Hiding content from Git + more on escape sequences \| TwistlockLabs Experiment](https://www.twistlock.com/2017/12/13/hiding-content-git-escape-sequence-twistlock-labs-experiment/)
@@ -24,10 +25,14 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [How to Create a Virus Using the Assembly Language](https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/)
 - [Injecting missing methods at runtime \| Hopper Disassembler](https://www.hopperapp.com/blog/?p=219)
 - [Introduction to Reverse Engineering Cocoa Applications \| FireEye Inc](https://www.fireeye.com/blog/threat-research/2017/03/introduction_to_reve.html)
+- [iOS Security](https://www.apple.com/business/docs/iOS_Security_Guide.pdf)
+- [Ivan Fratric's Security Blog: So you want to work in security? (and for some reason ended up here rather than reading other people&#8217;s posts on the topic).](https://ifsec.blogspot.it/2018/02/so-you-want-to-work-in-security-and-for.html)
 - [ldd arbitrary code execution](http://www.catonmat.net/blog/ldd-arbitrary-code-execution/)
 - [Linux x86 Program Start Up](http://dbp-consulting.com/tutorials/debugging/linuxProgramStartup.html)
 - [linux-insides](https://0xax.gitbooks.io/linux-insides/)
+- [macOS Security and Privacy Guide](https://github.com/drduh/macOS-Security-and-Privacy-Guide)
 - [Memory Corruption Attacks: The (almost) Complete History](https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf)
+- [New bypass and protection techniques for ASLR on Linux](http://blog.ptsecurity.com/2018/02/new-bypass-and-protection-techniques.html)
 - [Playing with canaries](https://www.elttam.com.au/blog/playing-with-canaries/)
 - [Pwning coworkers thanks to LaTeX](https://scumjr.github.io/2016/11/28/pwning-coworkers-thanks-to-latex/)
 - [Qualys Security Advisory - The Stack Clash](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
@@ -57,6 +62,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Browser security beyond sandboxing &#8211; Windows Security blog](https://blogs.technet.microsoft.com/mmpc/2017/10/18/browser-security-beyond-sandboxing/)
 - ["Bypassing" Microsoft's Patch for CVE-2017-0199](http://justhaifei1.blogspot.it/2017/07/bypassing-microsofts-cve-2017-0199-patch.html?m=1)
 - [Cisco's Talos Intelligence Group Blog: Vulnerability Walkthrough: 7zip CVE-2016-2334 HFS+ Code Execution Vulnerability](http://blog.talosintelligence.com/2017/11/exploiting-cve-2016-2334.html)
+- [Coalfire-Research/iOS-11.1.2-15B202-Jailbreak](https://github.com/Coalfire-Research/iOS-11.1.2-15B202-Jailbreak/)
 - [CVE-2017-2636: exploit the race condition in the n_hdlc Linux kernel driver bypassing SMEP](https://a13xp0p0v.github.io/2017/03/24/CVE-2017-2636.html)
 - [CY-2017-011: Type Confusion in Adobe Acrobat](https://cybellum.com/cy-2017-011-type-confusion-in-adobe-acrobat/)
 - [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
@@ -69,6 +75,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [fail0verflow :: The First PS4 Kernel Exploit: Adieu](https://fail0verflow.com/blog/2017/ps4-namedobj-exploit/)
 - [Finding Function's Load Address](http://uaf.io/exploitation/misc/2016/04/02/Finding-Functions.html) • DT_STRTAB
 - [File Stream Pointer Overflows](http://www.ouah.org/fsp-overflows.txt)
+- [FILE Structure Exploitation ('vtable' check bypass)](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)
 - [Flash JIT – Spraying info leak gadgets](http://zhodiac.hispahack.com/my-stuff/security/Flash_Jit_InfoLeak_Gadgets.pdf)
 - [Fun with FORTIFY_SOURCE](http://vulnfactory.org/blog/2010/04/27/fun-with-fortify_source/)
 - [geohot presents an evasi0n7 writeup](http://geohot.com/e7writeup.html)
@@ -76,6 +83,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [IAIK/meltdown: This repository contains several applications, demonstrating the Meltdown bug.](https://github.com/iaik/meltdown)
 - [IOHIDeous \| IOHIDFamily 0day](https://siguza.github.io/IOHIDeous/)
 - [Kernel Pool Overflow Exploitation In Real World – Windows 10 \| TRACKWATCH](http://trackwatch.com/kernel-pool-overflow-exploitation-in-real-world-windows-10/)
+- [Libc Realpath Buffer Underflow](https://www.halfdog.net/Security/2017/LibcRealpathBufferUnderflow/)
 - [Linux heap exploitation intro series: riding free on the heap – double free attacks!](https://sensepost.com/blog/2017/linux-heap-exploitation-intro-series-riding-free-on-the-heap-double-free-attacks/)
 - [Linux/x86 - sockfd trick + dup2(0,0), dup2(0,1), dup2(0,2) + execve /bin/sh - 50 bytes](http://shell-storm.org/shellcode/files/shellcode-881.php)
 - [Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html) • free, heap, unlink
@@ -89,6 +97,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Pwning (sometimes) with style - Dragons' notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf)
 - [pwnlib.dynelf — Resolving remote functions using leaks](https://docs.pwntools.com/en/stable/dynelf.html)
 - [Qualys Security Advisory - Buffer overflow in glibc's ld.so](http://seclists.org/fulldisclosure/2017/Dec/40)
+- [Reading privileged memory with a side-channel](https://googleprojectzero.blogspot.it/2018/01/reading-privileged-memory-with-side.html)
 - [The info leak era on software exploitation](https://media.blackhat.com/bh-us-12/Briefings/Serna/BH_US_12_Serna_Leak_Era_Slides.pdf)
 - [v0rtex \| IOSurface exploit](https://siguza.github.io/v0rtex/)
 - [What is vulnerable about this C code?](http://stackoverflow.com/questions/8304396/what-is-vulnerable-about-this-c-code) • env
@@ -128,6 +137,9 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Fixing/Making Holes in Binaries](https://www.youtube.com/watch?v=18DKETYfvjg) • Black Hat USA&nbsp;2002
 - [Heap Feng Shui in JavaScript](https://www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf) • Black Hat Europe&nbsp;2007
 - [Infosec and failure](https://www.youtube.com/watch?v=erZ2JlfTtcE) by 杏👼Ąż • Hack.lu&nbsp;2017
+- [iOS kernel exploitation archaeology](https://media.ccc.de/v/34c3-8720-ios_kernel_exploitation_archaeology) by argp • 34C3
+- [Linux Vulnerabilities Windows Exploits: Escalating Privileges with WSL](https://www.youtube.com/watch?v=3deJvbBHET4) by Saar Amar • BlueHat&nbsp;IL&nbsp;2018
+- [Machine learning, offense, and the future of automation](https://www.youtube.com/watch?v=BWFdxAG_TGk) by halvarflake • ZeroNights&nbsp;2017
 - [Practical C++ Decompilation](http://www.hexblog.com/wp-content/uploads/2011/08/Recon-2011-Skochinsky.pdf) • REcon&nbsp;2011
 - [Pwned By The Owner: What Happens When You Steal A Hacker's Computer](https://www.youtube.com/watch?v=Jwpg-AwJ0Jc) by Zoz • DEF&nbsp;CON&nbsp;18
 - [Unexpected Stories From a Hacker Inside the Government](https://www.youtube.com/watch?v=TSR-b9yuTbM) by Mudge • DEF&nbsp;CON&nbsp;21
@@ -139,6 +151,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [c00kies@venice - FAUST CTF 2017 Write-Up: Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/)
 - [c00kies@venice - Google CTF 2017 (Quals) Write-Up: Inst Prof](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/)
 - [CSAW '17 PWN - Auir (200pt)](https://glennmcgui.re/csaw-17-auir/)
+- [CSAW 2017 Finals - kws2](http://s3.eurecom.fr/nops/2018-01-24-csaw-2107-kws2.html)
 - [CSAW Quals 2017 FuntimeJS - RPISEC Blog](https://blog.rpis.ec/2017/09/csaw-quals-2017-funtimejs.html)
 - [CSAW Quals 2017: Zone Writeup](https://amritabi0s.wordpress.com/2017/09/18/csaw-quals-2017-zone-writeup/)
 - [Dragon Sector: Pwn2Win 2017 - Shift Register](http://blog.dragonsector.pl/2017/10/pwn2win-2017-shift-register.html)
