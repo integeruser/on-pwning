@@ -5,8 +5,10 @@ This repository contains my solutions to some CTF challenges and a list of inter
 
 - [A binary analysis, count me if you can](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/)
 - [A Memory Allocator](http://g.oswego.edu/dl/html/malloc.html)
+- [A Methodical Approach to Browser Exploitation | Ret2 Systems Blog](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/)
 - [About Exploits Writing](https://paper.seebug.org/papers/Archive/refs/2002.gera_.About_Exploits_Writing.pdf)
 - [All Your Docs Are Belong To Us › reversing an av engine to compose signatures capable of detecting classified documents](https://objective-see.com/blog/blog_0x22.html)
+- [Beware of strncpy() and strncat()](https://eklitzke.org/beware-of-strncpy-and-strncat)
 - [Cisco ASA series part four: dlmalloc-2.8.x, libdlmalloc, & dlmalloc on Cisco ASA](https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/october/cisco-asa-series-part-four-dlmalloc-2.8.x-libdlmalloc-and-dlmalloc-on-cisco-asa/)
 - [Collection of Known Patching Techniques](https://github.com/secretsquirrel/the-backdoor-factory/wiki/5.-Collection-of-Known-Patching-Techniques) • ELF
 - [Common Pitfalls When Writing Exploits](http://www.mathyvanhoef.com/2012/11/common-pitfalls-when-writing-exploits.html)
@@ -16,7 +18,11 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
 - [ELF Binary Code Injection, Loader/'Decrypter'](http://www.pinkstyle.org/elfcrypt.html)
 - [Exploiting Format String Vulnerabilities](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
+- [Frag Grenade! A Remote Code Execution Vulnerability in the Steam Client](https://www.contextis.com/blog/frag-grenade-a-remote-code-execution-vulnerability-in-the-steam-client)
 - [Fully undetectable backdooring PE files](https://haiderm.com/fully-undetectable-backdooring-pe-files/)
+- [Fuzzing arbitrary functions in ELF binaries - Blah Cats](https://blahcat.github.io/2018/03/11/fuzzing-arbitrary-functions-in-elf-binaries/)
+- [Game hacking reinvented? – A cod exploit](https://momo5502.com/blog/?p=34)
+- [GLIBC MALLOC FOR EXPLOITERS](https://yannayl.github.io/glibc_malloc_for_exploiters/)
 - [GOT and PLT for pwning.](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
 - [Hardening C/C++ Programs Part II &#8211; Executable-Space Protection and ASLR &#8211; Productive C++](http://www.productive-cpp.com/hardening-cpp-programs-executable-space-protection-address-space-layout-randomization-aslr/)
 - [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/)
@@ -37,13 +43,17 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Pwning coworkers thanks to LaTeX](https://scumjr.github.io/2016/11/28/pwning-coworkers-thanks-to-latex/)
 - [Qualys Security Advisory - The Stack Clash](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
 - [Radare2 of the Lost Magic Gadget](https://0xabe.io/howto/exploit/2016/03/30/Radare2-of-the-Lost-Magic-Gadget.html)
+- [Recommended compiler and linker flags for GCC](https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc/)
 - [Replacing x86 firmware with Linux and Go](https://lwn.net/SubscriberLink/738649/81007748bf15c1e5/)
 - [Return to VDSO using ELF Auxiliary Vectors](http://v0ids3curity.blogspot.it/2014/12/return-to-vdso-using-elf-auxiliary.html)
 - [Reversing C++ programs with IDA pro and Hex-rays](https://blog.0xbadc0de.be/archives/67)
+- [Some universal gadget sequence for Linux x86_64 ROP payload](https://v0ids3curity.blogspot.it/2013/07/some-gadget-sequence-for-x8664-rop.html)
+- [Tearing apart printf()](http://www.maizure.org/projects/printf/index.html)
 - [The Art Of ELF: Analysis and Exploitations](http://fluxius.handgrep.se/2011/10/20/the-art-of-elf-analysises-and-exploitations/)
 - [The Chakra Exploit And The Limitations Of Modern Cyber Security Threat Mitigation Techniques](https://www.endgame.com/blog/technical-blog/chakra-exploit-and-limitations-modern-mitigation-techniques)
 - [The hacker known as "Alex" — Operation Luigi: How I hacked my friend without her noticing](https://defaultnamehere.tumblr.com/post/163734466355/operation-luigi-how-i-hacked-my-friend-without)
 - [The one-gadget in glibc](https://david942j.blogspot.it/2017/02/project-one-gadget-in-glibc.html)
+- [The real power of Linux executables](https://ownyourbits.com/2018/05/23/the-real-power-of-linux-executables/)
 - [Unix ELF parasites and virus](http://vxheaven.org/lib/vsc01.html)
 - [What are vdso and vsyscall?](https://stackoverflow.com/questions/19938324/what-are-vdso-and-vsyscall)
 - [What is the difference between .got and .got.plt section?](https://stackoverflow.com/questions/11676472/what-is-the-difference-between-got-and-got-plt-section)
@@ -142,6 +152,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Machine learning, offense, and the future of automation](https://www.youtube.com/watch?v=BWFdxAG_TGk) by halvarflake • ZeroNights&nbsp;2017
 - [Practical C++ Decompilation](http://www.hexblog.com/wp-content/uploads/2011/08/Recon-2011-Skochinsky.pdf) • REcon&nbsp;2011
 - [Pwned By The Owner: What Happens When You Steal A Hacker's Computer](https://www.youtube.com/watch?v=Jwpg-AwJ0Jc) by Zoz • DEF&nbsp;CON&nbsp;18
+- [return-to-csu: A New Method to Bypass 64-bit Linux ASLR](https://www.blackhat.com/docs/asia-18/asia-18-Marco-return-to-csu-a-new-method-to-bypass-the-64-bit-Linux-ASLR-wp.pdf) • Black Hat Asia&nbsp;2018
 - [Unexpected Stories From a Hacker Inside the Government](https://www.youtube.com/watch?v=TSR-b9yuTbM) by Mudge • DEF&nbsp;CON&nbsp;21
 
 ## Write-ups
