@@ -5,7 +5,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 
 - [A binary analysis, count me if you can](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/)
 - [A Memory Allocator](http://g.oswego.edu/dl/html/malloc.html)
-- [A Methodical Approach to Browser Exploitation | Ret2 Systems Blog](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/)
+- [A Methodical Approach to Browser Exploitation | Ret2 Systems Blog](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/), [Vulnerability Discovery Against Apple Safari | Ret2 Systems Blog](https://blog.ret2.io/2018/06/13/pwn2own-2018-vulnerability-discovery/), [Timeless Debugging of Complex Software | Ret2 Systems Blog](https://blog.ret2.io/2018/06/19/pwn2own-2018-root-cause-analysis/)
 - [About Exploits Writing](https://paper.seebug.org/papers/Archive/refs/2002.gera_.About_Exploits_Writing.pdf)
 - [All Your Docs Are Belong To Us › reversing an av engine to compose signatures capable of detecting classified documents](https://objective-see.com/blog/blog_0x22.html)
 - [Beware of strncpy() and strncat()](https://eklitzke.org/beware-of-strncpy-and-strncat)
@@ -28,6 +28,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/)
 - [Hiding content from Git + more on escape sequences \| TwistlockLabs Experiment](https://www.twistlock.com/2017/12/13/hiding-content-git-escape-sequence-twistlock-labs-experiment/)
 - [How main() is executed on Linux](http://www.tldp.org/LDP/LG/issue84/hawk.html)
+- [How programs get run: ELF binaries](https://lwn.net/Articles/631631/)
 - [How to Create a Virus Using the Assembly Language](https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/)
 - [Injecting missing methods at runtime \| Hopper Disassembler](https://www.hopperapp.com/blog/?p=219)
 - [Introduction to Reverse Engineering Cocoa Applications \| FireEye Inc](https://www.fireeye.com/blog/threat-research/2017/03/introduction_to_reve.html)
