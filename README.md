@@ -21,6 +21,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Frag Grenade! A Remote Code Execution Vulnerability in the Steam Client](https://www.contextis.com/blog/frag-grenade-a-remote-code-execution-vulnerability-in-the-steam-client)
 - [Fully undetectable backdooring PE files](https://haiderm.com/fully-undetectable-backdooring-pe-files/)
 - [Fuzzing arbitrary functions in ELF binaries - Blah Cats](https://blahcat.github.io/2018/03/11/fuzzing-arbitrary-functions-in-elf-binaries/)
+- [Fuzzing workflows; a fuzz job from start to finish](https://foxglovesecurity.com/2016/03/15/fuzzing-workflows-a-fuzz-job-from-start-to-finish/)
 - [Game hacking reinvented? – A cod exploit](https://momo5502.com/blog/?p=34)
 - [GLIBC MALLOC FOR EXPLOITERS](https://yannayl.github.io/glibc_malloc_for_exploiters/)
 - [GOT and PLT for pwning.](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
@@ -41,6 +42,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Memory Corruption Attacks: The (almost) Complete History](https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf)
 - [New bypass and protection techniques for ASLR on Linux](http://blog.ptsecurity.com/2018/02/new-bypass-and-protection-techniques.html)
 - [Playing with canaries](https://www.elttam.com.au/blog/playing-with-canaries/)
+- [Push the Red Button: Fuzzing with AFL is an Art](https://moyix.blogspot.com/2016/07/fuzzing-with-afl-is-an-art.html)
 - [Pwning coworkers thanks to LaTeX](https://scumjr.github.io/2016/11/28/pwning-coworkers-thanks-to-latex/)
 - [Qualys Security Advisory - The Stack Clash](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
 - [Radare2 of the Lost Magic Gadget](https://0xabe.io/howto/exploit/2016/03/30/Radare2-of-the-Lost-Magic-Gadget.html)
@@ -145,6 +147,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Bot vs. Bot: Evading Machine Learning Malware Detection](https://www.blackhat.com/docs/us-17/thursday/us-17-Anderson-Bot-Vs-Bot-Evading-Machine-Learning-Malware-Detection.pdf) • Black Hat USA&nbsp;2017
 - [Breaking the x86 Instruction Set](https://www.youtube.com/watch?v=KrksBdWcZgQ) • Black Hat USA&nbsp;2017
 - [Bypassing clang’s SafeStack for Fun and Profit](https://www.blackhat.com/docs/eu-16/materials/eu-16-Goktas-Bypassing-Clangs-SafeStack.pdf) • Black Hat Europe&nbsp;2016
+- [Effective file format fuzzing](https://www.blackhat.com/docs/eu-16/materials/eu-16-Jurczyk-Effective-File-Format-Fuzzing-Thoughts-Techniques-And-Results.pdf) by j00ru • Black Hat Europe&nbsp;2016
 - [Fixing/Making Holes in Binaries](https://www.youtube.com/watch?v=18DKETYfvjg) • Black Hat USA&nbsp;2002
 - [Heap Feng Shui in JavaScript](https://www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf) • Black Hat Europe&nbsp;2007
 - [Infosec and failure](https://www.youtube.com/watch?v=erZ2JlfTtcE) by 杏👼Ąż • Hack.lu&nbsp;2017
