@@ -2,7 +2,6 @@
 This repository contains my solutions to some CTF challenges and a list of interesting resources about pwning stuff.
 
 ## Readings
-
 - [A binary analysis, count me if you can](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/)
 - [A Memory Allocator](http://g.oswego.edu/dl/html/malloc.html)
 - [A Methodical Approach to Browser Exploitation | Ret2 Systems Blog](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/), [Vulnerability Discovery Against Apple Safari | Ret2 Systems Blog](https://blog.ret2.io/2018/06/13/pwn2own-2018-vulnerability-discovery/), [Timeless Debugging of Complex Software | Ret2 Systems Blog](https://blog.ret2.io/2018/06/19/pwn2own-2018-root-cause-analysis/), [Weaponization of a JavaScriptCore Vulnerability](https://blog.ret2.io/2018/07/11/pwn2own-2018-jsc-exploit/)
@@ -65,7 +64,6 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [What is this protection that seems to prevent ROP when ASLR in ON?](https://reverseengineering.stackexchange.com/questions/13811/what-is-this-protection-that-seems-to-prevent-rop-when-aslr-in-on)
 
 ## Exploits
-
 - [aPAColypse now: Exploiting Windows 10 in a Local Network with WPAD/PAC and JScript](https://googleprojectzero.blogspot.it/2017/12/apacolypse-now-exploiting-windows-10-in_18.html)
 - [AnC - VUSec](https://www.vusec.net/projects/anc/) • ASLR⊕Cache
 - [ArmisSecurity/blueborne: PoC scripts demonstrating the BlueBorne vulnerabilities](https://github.com/ArmisSecurity/blueborne)
@@ -123,7 +121,6 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Zero Day Initiative — Use-After-Silence: Exploiting a quietly patched UAF in VMware](https://www.thezdi.com/blog/2017/6/26/use-after-silence-exploiting-a-quietly-patched-uaf-in-vmware)
 
 ## Papers
-
 - [A Eulogy for Format Strings](http://phrack.org/issues/67/9.html) • Phrack
 - [Advanced Doug Lea's malloc exploits](http://phrack.org/issues/61/6.html) • Phrack
 - [Advances in format string exploitation](http://phrack.org/issues/59/7.html) • Phrack
@@ -143,7 +140,6 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Vudo - An object superstitiously believed to embody magical powers](http://www.phrack.org/issues/57/8.html) • Phrack, dlmalloc, frontlink, unlink
 
 ## Talks/Presentations
-
 - [$hell on Earth: From Browser to System Compromise](https://www.youtube.com/watch?v=7wIiqqgDWdQ) • Black Hat USA&nbsp;2016
 - [Attacking The XNU Kernel In El Capitan](https://www.youtube.com/watch?v=k550C0V79ts) • Black Hat Europe&nbsp;2015
 - [Behind the Scenes with iOS Security](https://www.youtube.com/watch?v=BLGFriOKz6U) • Black Hat USA&nbsp;2016
@@ -163,7 +159,6 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Unexpected Stories From a Hacker Inside the Government](https://www.youtube.com/watch?v=TSR-b9yuTbM) by Mudge • DEF&nbsp;CON&nbsp;21
 
 ## Write-ups
-
 - [0ctf Quals 2017 - BabyHeap2017](http://uaf.io/exploitation/2017/03/19/0ctf-Quals-2017-BabyHeap2017.html) • fastbins
 - [33C3 CTF – babyfengshui](https://galhacktictrendsetters.wordpress.com/2017/01/05/33c3-ctf-babyfengshui/)
 - [c00kies@venice - FAUST CTF 2017 Write-Up: Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/)
