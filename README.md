@@ -5,7 +5,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 
 - [A binary analysis, count me if you can](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/)
 - [A Memory Allocator](http://g.oswego.edu/dl/html/malloc.html)
-- [A Methodical Approach to Browser Exploitation | Ret2 Systems Blog](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/), [Vulnerability Discovery Against Apple Safari | Ret2 Systems Blog](https://blog.ret2.io/2018/06/13/pwn2own-2018-vulnerability-discovery/), [Timeless Debugging of Complex Software | Ret2 Systems Blog](https://blog.ret2.io/2018/06/19/pwn2own-2018-root-cause-analysis/)
+- [A Methodical Approach to Browser Exploitation | Ret2 Systems Blog](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/), [Vulnerability Discovery Against Apple Safari | Ret2 Systems Blog](https://blog.ret2.io/2018/06/13/pwn2own-2018-vulnerability-discovery/), [Timeless Debugging of Complex Software | Ret2 Systems Blog](https://blog.ret2.io/2018/06/19/pwn2own-2018-root-cause-analysis/), [Weaponization of a JavaScriptCore Vulnerability](https://blog.ret2.io/2018/07/11/pwn2own-2018-jsc-exploit/)
 - [About Exploits Writing](https://paper.seebug.org/papers/Archive/refs/2002.gera_.About_Exploits_Writing.pdf)
 - [All Your Docs Are Belong To Us › reversing an av engine to compose signatures capable of detecting classified documents](https://objective-see.com/blog/blog_0x22.html)
 - [Beware of strncpy() and strncat()](https://eklitzke.org/beware-of-strncpy-and-strncat)
@@ -39,6 +39,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Linux x86 Program Start Up](http://dbp-consulting.com/tutorials/debugging/linuxProgramStartup.html)
 - [linux-insides](https://0xax.gitbooks.io/linux-insides/)
 - [macOS Security and Privacy Guide](https://github.com/drduh/macOS-Security-and-Privacy-Guide)
+- [Making a low level (Linux) debugger, part 3: our first program](https://blog.asrpo.com/making_a_low_level_debugger_part_3)
 - [Memory Corruption Attacks: The (almost) Complete History](https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf)
 - [New bypass and protection techniques for ASLR on Linux](http://blog.ptsecurity.com/2018/02/new-bypass-and-protection-techniques.html)
 - [Playing with canaries](https://www.elttam.com.au/blog/playing-with-canaries/)
@@ -52,6 +53,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Reversing C++ programs with IDA pro and Hex-rays](https://blog.0xbadc0de.be/archives/67)
 - [Some universal gadget sequence for Linux x86_64 ROP payload](https://v0ids3curity.blogspot.it/2013/07/some-gadget-sequence-for-x8664-rop.html)
 - [Tearing apart printf()](http://www.maizure.org/projects/printf/index.html)
+- [Technical aspects of CTF contest organization - CERT Polska](https://www.cert.pl/en/news/single/technical-aspects-of-ctf-contest-organization/)
 - [The Art Of ELF: Analysis and Exploitations](http://fluxius.handgrep.se/2011/10/20/the-art-of-elf-analysises-and-exploitations/)
 - [The Chakra Exploit And The Limitations Of Modern Cyber Security Threat Mitigation Techniques](https://www.endgame.com/blog/technical-blog/chakra-exploit-and-limitations-modern-mitigation-techniques)
 - [The hacker known as "Alex" — Operation Luigi: How I hacked my friend without her noticing](https://defaultnamehere.tumblr.com/post/163734466355/operation-luigi-how-i-hacked-my-friend-without)
@@ -100,6 +102,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Linux heap exploitation intro series: riding free on the heap – double free attacks!](https://sensepost.com/blog/2017/linux-heap-exploitation-intro-series-riding-free-on-the-heap-double-free-attacks/)
 - [Linux/x86 - sockfd trick + dup2(0,0), dup2(0,1), dup2(0,2) + execve /bin/sh - 50 bytes](http://shell-storm.org/shellcode/files/shellcode-881.php)
 - [Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html) • free, heap, unlink
+- [Never-Ending Security: eBPF and Analysis of the get-rekt-linux-hardened.c Exploit for CVE-2017-16995](https://ricklarabee.blogspot.com/2018/07/ebpf-and-analysis-of-get-rekt-linux.html)
 - [Offset2lib: bypassing full ASLR on 64bit Linux](http://cybersecurity.upv.es/attacks/offset2lib/offset2lib.html)
 - [Play with FILE Structure - Yet Another Binary Exploit Technique](https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique)
 - [Playing with signals : An overview on Sigreturn Oriented Programming](https://thisissecurity.net/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
