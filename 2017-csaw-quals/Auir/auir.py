@@ -15,7 +15,7 @@ if args['GDB']:
     elf, libc = io.elf, io.libc
 elif args['REMOTE']:
     io = remote('pwn.chal.csaw.io', 7713)
-    elf, libc = ELF('./auir'), ELF('./libc-2.23.so')
+    elf, libc = ELF('./auir'), ELF('./libc-amd64-2.23-0ubuntu9.so')
 else:
     io = process('./auir')
     elf, libc = io.elf, io.libc
@@ -117,7 +117,7 @@ io.interactive()
 #     Stack:    No canary found
 #     NX:       NX enabled
 #     PIE:      No PIE (0x400000)
-# [*] '/home/ubuntu/vbox/libc-2.23.so'
+# [*] '/home/ubuntu/vbox/libc-amd64-2.23-0ubuntu9.so'
 #     Arch:     amd64-64-little
 #     RELRO:    Partial RELRO
 #     Stack:    Canary found

