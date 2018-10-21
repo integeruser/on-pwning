@@ -5,28 +5,17 @@ from pwn import *
 context(arch='amd64', os='linux', aslr=True, terminal=['tmux', 'neww'])
 
 if args['GDB']:
+    elf, libc = ELF('./scv-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
     io = gdb.debug(
-        './scv',
-        gdbscript='''\
-        # read
-        b *0x400CCE
-        ignore 1 2
-
-        # puts
-        # b *0x400D74
-
+        './scv-2.23-0ubuntu9', gdbscript='''\
         c
     ''')
-    elf = io.elf
-    libc = io.elf.libc
 elif args['REMOTE']:
+    elf, libc = ELF('./scv'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
     io = remote('pwn.chal.csaw.io', 3764)
-    elf = ELF('./scv')
-    libc = ELF('./libc-amd64-2.23-0ubuntu9.so')
 else:
-    io = process('./scv')
-    elf = io.elf
-    libc = io.elf.libc
+    elf, libc = ELF('./scv-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    io = process(elf.path)
 
 
 def find_canary():
