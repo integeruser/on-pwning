@@ -7,7 +7,7 @@ from pwn import *
 context(arch="amd64", os="linux")
 
 if not args["REMOTE"]:
-    binary = ELF("./heap_heaven_2-2.28-4")
+    binary = ELF("./heap_heaven_2-2.28-4")  # https://github.com/integeruser/bowkin
     libc = ELF("libs/libc-x86_64-2.28-4.so")
 
     argv = [binary.path]
@@ -31,6 +31,8 @@ else:
     libc = ELF("libs/libc-x86_64-2.28-4.so")
 
     io = remote("arcade.fluxfingers.net", 1809)
+
+# by integeruser
 
 
 def write(size, offset, data):
