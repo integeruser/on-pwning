@@ -17,8 +17,8 @@ context(arch="amd64", os="linux")
 # more reliable in remote, just decrease the size of the chunks we use here (of course, some calculations
 # are required to maintain the same heap layout)
 
-# EDIT: apparently, the intended solution (https://github.com/scwuaptx/CTF/blob/master/2018-writeup/hitcon/baby_tcache.py)
-# is a little smarter: props!
+# UPDATE: the intended solution (https://github.com/scwuaptx/CTF/blob/master/2018-writeup/hitcon/baby_tcache.py)
+# is a little smarter than ours: props!
 
 
 def exploit():
