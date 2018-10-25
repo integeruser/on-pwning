@@ -18,7 +18,7 @@ context(arch="amd64", os="linux")
 # are required to maintain the same heap layout)
 
 # UPDATE: the intended solution (https://github.com/scwuaptx/CTF/blob/master/2018-writeup/hitcon/baby_tcache.py)
-# is a little smarter than ours: props!
+# is much simpler than ours: props!
 
 
 def exploit():
@@ -409,8 +409,7 @@ with context.quiet:
                 else:
                     io = process(argv=argv, env=envp)
             else:
-                io = remote("192.168.56.64", 12345)
-                # io = remote("52.68.236.186", 56746)
+                io = remote("52.68.236.186", 56746)
 
             if args["GDB"]:
                 libc_address = 0x7FFFF79E4000
