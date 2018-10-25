@@ -18,7 +18,7 @@ context(arch="amd64", os="linux")
 # are required to maintain the same heap layout)
 
 # UPDATE: the intended solution (https://github.com/scwuaptx/CTF/blob/master/2018-writeup/hitcon/baby_tcache.py)
-# is much simpler than ours: props!
+# seems simpler and requires less bruteforcing: props!
 
 
 def exploit():
