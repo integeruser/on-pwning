@@ -5,16 +5,16 @@ from pwn import *
 context(arch='amd64', os='linux', terminal=['tmux', 'neww'])
 
 if args['GDB']:
-    elf, libc = ELF('./auir-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    elf, libc = ELF('./auir-amd64-2.23-0ubuntu9'), ELF('libs/amd64/0ubuntu9/libc-2.23.so')
     io = gdb.debug(
-        './auir-2.23-0ubuntu9', gdbscript='''\
+        './auir-amd64-2.23-0ubuntu9', gdbscript='''\
         c
     ''')
 elif args['REMOTE']:
-    elf, libc = ELF('./auir'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    elf, libc = ELF('./auir'), ELF('libs/amd64/0ubuntu9/libc-2.23.so')
     io = remote('pwn.chal.csaw.io', 7713)
 else:
-    elf, libc = ELF('./auir-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    elf, libc = ELF('./auir-amd64-2.23-0ubuntu9'), ELF('libs/amd64/0ubuntu9/libc-2.23.so')
     io = process(elf.path)
 
 

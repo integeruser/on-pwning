@@ -5,16 +5,16 @@ from pwn import *
 context(arch='amd64', os='linux', aslr=True, terminal=['tmux', 'neww'])
 
 if args['GDB']:
-    elf, libc = ELF('./zone-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
-    io = gdb.debug('./zone-2.23-0ubuntu9', gdbscript='''\
+    elf, libc = ELF('./zone-amd64-2.23-0ubuntu9'), ELF('libs/amd64/0ubuntu9/libc-2.23.so')
+    io = gdb.debug('./zone-amd64-2.23-0ubuntu9', gdbscript='''\
         c
     ''')
 elif args['REMOTE']:
-    elf, libc = ELF('./zone'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
+    elf, libc = ELF('./zone'), ELF('libs/amd64/0ubuntu9/libc-2.23.so')
     io = remote('pwn.chal.csaw.io', 5223)
 else:
-    elf, libc = ELF('./zone-2.23-0ubuntu9'), ELF('libs/libc-amd64-2.23-0ubuntu9.so')
-    io = process(['stdbuf', '-i0', '-o0', '-e0', './zone-2.23-0ubuntu9'])
+    elf, libc = ELF('./zone-amd64-2.23-0ubuntu9'), ELF('libs/amd64/0ubuntu9/libc-2.23.so')
+    io = process(['stdbuf', '-i0', '-o0', '-e0', './zone-amd64-2.23-0ubuntu9'])
 
 
 def allocate(size):

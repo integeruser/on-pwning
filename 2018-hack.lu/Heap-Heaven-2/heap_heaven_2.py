@@ -7,8 +7,8 @@ from pwn import *
 context(arch="amd64", os="linux")
 
 if not args["REMOTE"]:
-    binary = ELF("./heap_heaven_2-2.28-4")  # https://github.com/integeruser/bowkin
-    libc = ELF("libs/libc-x86_64-2.28-4.so")
+    binary = ELF("./heap_heaven_2-x86_64-2.28-4")  # https://github.com/integeruser/bowkin
+    libc = ELF("libs/x86_64/4/libc-2.28.so")
 
     argv = [binary.path]
     envp = {"PWD": os.getcwd()}
