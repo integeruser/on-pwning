@@ -6,10 +6,9 @@ from pwn import *
 
 context(arch="amd64", os="linux")
 
-binary = ELF("./aliensVSsamurais")
-
 if not args["REMOTE"]:
-    libc = ELF("./libc-amd64-2.23-0ubuntu10.so")
+    binary = ELF("./aliensVSsamurais-amd64-2.23-0ubuntu10")  # https://github.com/integeruser/bowkin
+    libc = ELF("libs/amd64/0ubuntu10/libc-2.23.so")
 
     argv = [binary.path]
     envp = {"PWD": os.getcwd()}
@@ -30,7 +29,8 @@ if not args["REMOTE"]:
     else:
         io = process(argv=argv, env=envp)
 else:
-    libc = ELF("./libc-amd64-2.23-0ubuntu10.so")
+    binary = ELF("./aliensVSsamurais")
+    libc = ELF("libs/amd64/0ubuntu10/libc-2.23.so")
 
     io = remote("pwn.chal.csaw.io", 9004)
 
