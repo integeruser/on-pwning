@@ -1,204 +1,182 @@
 # on-pwning
 This repository contains my solutions to some CTF challenges and a list of interesting resources about pwning stuff.
 
+
+## Write-Ups/PoCs
+- [7zip CVE-2016-2334 HFS+ Code Execution Vulnerability | talosintelligence.com](http://blog.talosintelligence.com/2017/11/exploiting-cve-2016-2334.html)
+- [A Methodical Approach to Browser Exploitation | blog.ret2.io](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/)
+    - [Vulnerability Discovery Against Apple Safari | blog.ret2.io](https://blog.ret2.io/2018/06/13/pwn2own-2018-vulnerability-discovery/)
+    - [Timeless Debugging of Complex Software | blog.ret2.io](https://blog.ret2.io/2018/06/19/pwn2own-2018-root-cause-analysis/)
+    - [Weaponization of a JavaScriptCore Vulnerability | blog.ret2.io](https://blog.ret2.io/2018/07/11/pwn2own-2018-jsc-exploit/)
+    - [Cracking the Walls of the Safari Sandbox | blog.ret2.io](https://blog.ret2.io/2018/07/25/pwn2own-2018-safari-sandbox/) • Frida, fuzzing
+    - [Exploiting the macOS WindowServer for root | blog.ret2.io](https://blog.ret2.io/2018/08/28/pwn2own-2018-sandbox-escape/) • Frida
+- [All Your Docs Are Belong To Us › reversing an av engine to compose signatures capable of detecting classified documents | objective-see.com](https://objective-see.com/blog/blog_0x22.html)
+- [Avast Antivirus: Remote Stack Buffer Overflow with Magic Numbers | landave.io](https://landave.io/2017/06/avast-antivirus-remote-stack-buffer-overflow-with-magic-numbers/)
+- [Back to 28: Grub2 Authentication 0-Day | hmarco.org](http://hmarco.org/bugs/CVE-2015-8370-Grub2-authentication-bypass.html)
+- [Better slow than sorry – VirtualBox 3D acceleration considered harmful | phoenhex.re](https://phoenhex.re/2018-07-27/better-slow-than-sorry)
+- [Browser security beyond sandboxing | microsoft.com](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/18/browser-security-beyond-sandboxing)
+- [CVE-2017-2636: exploit the race condition in the n_hdlc Linux kernel driver bypassing SMEP | a13xp0p0v.github.io](https://a13xp0p0v.github.io/2017/03/24/CVE-2017-2636.html)
+- [Disabling MacOS SIP via a VirtualBox kext Vulnerability | mdsec.co.uk](https://www.mdsec.co.uk/2018/08/disabling-macos-sip-via-a-virtualbox-kext-vulnerability/)
+- [eBPF and Analysis of the get-rekt-linux-hardened.c Exploit for CVE-2017-16995 | ricklarabee.blogspot.com](https://ricklarabee.blogspot.com/2018/07/ebpf-and-analysis-of-get-rekt-linux.html)
+- [Exploiting CVE-2017-5123 | reverse.put.as](https://reverse.put.as/2017/11/07/exploiting-cve-2017-5123/)
+- [Exploring 6 Previously Unknown Remote Kernel Bugs Affecting Android Phones | pleasestopnamingvulnerabilities.com](https://pleasestopnamingvulnerabilities.com)
+- [Frag Grenade! A Remote Code Execution Vulnerability in the Steam Client | contextis.com](https://www.contextis.com/blog/frag-grenade-a-remote-code-execution-vulnerability-in-the-steam-client)
+- [Fuzzing Counter-Strike: Global Offensive maps files with AFL | phoenhex.re](https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp)
+- [Fuzzing CS:GO BSP Files | path.network](https://blog.path.network/fuzzing-cs-go-bsp-files/)
+- [Game hacking reinvented? – A cod exploit | momo5502.com](https://momo5502.com/blog/?p=34)
+- [geohot presents an evasi0n7 writeup | geohot.com](http://geohot.com/e7writeup.html)
+- [IOHIDeous | IOHIDFamily 0day | siguza.github.io](https://siguza.github.io/IOHIDeous/)
+- [iOS 11 Jailbreak | github.com/Coalfire-Research](https://github.com/Coalfire-Research/iOS-11.1.2-15B202-Jailbreak/blob/master/iOS_jailbreak_writeup.pdf)
+- [Meltdown Proof-of-Concept | github.com/iaik](https://github.com/iaik/meltdown)
+- [Pwn2Own: Safari sandbox part 1 – Mount yourself a root shell | phoenhex.re](https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc)
+    - [Pwn2Own: Safari sandbox part 2 – Wrap your way around to root | phoenhex.re](https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape)
+- [Over The Air - Vol. 2, Pt. 1: Exploiting The Wi-Fi Stack on Apple Devices | googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2017/09/over-air-vol-2-pt-1-exploiting-wi-fi.html)
+- [Reading Backwards – Controlling an Integer Underflow in Adobe Reader | zerodayinitiative.com](https://www.zerodayinitiative.com/blog/2017/12/18/reading-backwards-controlling-an-integer-underflow-in-adobe-reader)
+- [Remote LD_PRELOAD Exploitation | elttam.com.au](https://www.elttam.com.au/blog/goahead/)
+- [The First PS4 Kernel Exploit: Adieu | fail0verflow.com](https://fail0verflow.com/blog/2017/ps4-namedobj-exploit/)
+- [v0rtex | IOSurface exploit | siguza.github.io/v0rtex](https://siguza.github.io/v0rtex/)
+- [VirtualBox VRDP Guest-to-Host Escape | securiteam.com](https://blogs.securiteam.com/index.php/archives/3736)
+- [Xen SMEP (and SMAP) bypass | nccgroup.trust](https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2015/april/xen-smep-and-smap-bypass/)
+
+#### CTFs
+- [0CTF 2017 Quals | BabyHeap2017 | uaf.io](http://uaf.io/exploitation/2017/03/19/0ctf-Quals-2017-BabyHeap2017.html)
+- [33C3 CTF 2016 | babyfengshui | galhacktictrendsetters.wordpress.com](https://galhacktictrendsetters.wordpress.com/2017/01/05/33c3-ctf-babyfengshui/)
+- [33C3 CTF 2016 | hohoho | github.com/InfoSecIITR](https://github.com/InfoSecIITR/write-ups/tree/master/2016/33c3-ctf-2016/misc/hohoho) • bash
+- [Atredis BlackHat CTF 2018 | msreverseengineering.com](https://www.msreverseengineering.com/blog/2018/7/24/the-atredis-blackhat-2018-ctf-challenge)
+- [CSAW 2017 Finals | kws2 | s3.eurecom.fr](http://s3.eurecom.fr/nops/2018-01-24-csaw-2107-kws2.html)
+- [CSAW 2017 Quals | FuntimeJS | rpis.ec](https://blog.rpis.ec/2017/09/csaw-quals-2017-funtimejs.html)
+- [DEF CON 2018 Finals | Doublethink | robertxiao.ca](https://www.robertxiao.ca/hacking/defcon2018-assembly-polyglot/)
+- [FAUST CTF 2017 | Alexa | secgroup.github.io](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/)
+- [Google CTF 2017 Quals | Inst Prof | secgroup.github.io](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/)
+- [Google CTF 2017 Quals | Primary | david942j.blogspot.com](https://david942j.blogspot.com/2017/06/write-up-google-ctf-2017-pwn474-primary.html)
+- [Google CTF 2018 Quals | Sandbox Compat | david942j.blogspot.com](https://david942j.blogspot.com/2018/06/write-up-google-ctf-2018-pwn420-sandbox.html)
+- [Hack.lu CTF 2014 | OREO | wapiflapi.github.io](http://wapiflapi.github.io/2014/11/17/hacklu-oreo-with-ret2dl-resolve/) • ret2dl-resolve
+- [Hack.lu CTF 2018 | Baby Kernel | Rusty Codepad | maltekraus.de](https://maltekraus.de/blog/ctf/english/2018/10/18/hack-lu.html)
+- [HITCON CTF 2017 Quals | Everlasting Imaginative Void | pwning.fun](http://pwning.fun//writeup/2017/11/03/HitconCTF2017-Everlasting-Imaginative-Void.html)
+- [HITCON CTF 2017 Quals | Real Ruby Escaping | david942j.blogspot.com](https://david942j.blogspot.com/2017/11/official-write-up-hitcon-ctf-2017.html)
+- [HXP CTF 2017 | Flag Store | pwning.re](https://pwning.re/2017/11/19/hxp-flag-store/) • FORTIFY_SOURCE, seccomp
+- [noxCTF 2018 | PSRF | github.com/seadog007](https://github.com/seadog007/noxCTF-2018-PSRF-as-Pwn) • SSRF
+- [Pwn2Win 2017 | Shift Register | dragonsector.pl](http://blog.dragonsector.pl/2017/10/pwn2win-2017-shift-register.html)
+- [RingZer0 Team Online CTF | Shellcoding | github.com/VulnHub](https://github.com/VulnHub/ctf-writeups/blob/master/2015/ringzer0/shellcoding.md)
+- [TokyoWesterns CTF 2018 | EscapeMe | david942j.blogspot.com](https://david942j.blogspot.com/2018/09/write-up-tokyowesterns-ctf-2018.html)
+- [TokyoWesterns/MMA CTF 2016 | Diary | uaf.io](http://uaf.io/exploitation/2016/09/06/TokyoWesterns-MMA-Diary.html) • seccomp
+
+
 ## Readings
-- [A binary analysis, count me if you can](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/)
-- [A Memory Allocator](http://g.oswego.edu/dl/html/malloc.html)
-- [A Methodical Approach to Browser Exploitation | Ret2 Systems Blog](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/), [Vulnerability Discovery Against Apple Safari | Ret2 Systems Blog](https://blog.ret2.io/2018/06/13/pwn2own-2018-vulnerability-discovery/), [Timeless Debugging of Complex Software | Ret2 Systems Blog](https://blog.ret2.io/2018/06/19/pwn2own-2018-root-cause-analysis/), [Weaponization of a JavaScriptCore Vulnerability](https://blog.ret2.io/2018/07/11/pwn2own-2018-jsc-exploit/)
-- [About Exploits Writing](https://paper.seebug.org/papers/Archive/refs/2002.gera_.About_Exploits_Writing.pdf)
-- [All Your Docs Are Belong To Us › reversing an av engine to compose signatures capable of detecting classified documents](https://objective-see.com/blog/blog_0x22.html)
-- [Almost booting an iOS kernel in QEMU](https://worthdoingbadly.com/xnuqemu/)
-- [ASLR Protection for Statically Linked Executables &mdash; Leviathan Security](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables) • ASLR, ELF, RELRO
-- [Beware of strncpy() and strncat()](https://eklitzke.org/beware-of-strncpy-and-strncat)
-- [Cisco ASA series part four: dlmalloc-2.8.x, libdlmalloc, & dlmalloc on Cisco ASA](https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/october/cisco-asa-series-part-four-dlmalloc-2.8.x-libdlmalloc-and-dlmalloc-on-cisco-asa/)
-- [Collection of Known Patching Techniques](https://github.com/secretsquirrel/the-backdoor-factory/wiki/5.-Collection-of-Known-Patching-Techniques) • ELF
-- [Common Pitfalls When Writing Exploits](http://www.mathyvanhoef.com/2012/11/common-pitfalls-when-writing-exploits.html)
-- [Controlling uninitialized memory with LD_PRELOAD](http://vulnfactory.org/blog/2010/04/08/controlling-uninitialized-memory-with-ld_preload/)
-- [Cross debugging for MIPS ELF with QEMU/toolchain](https://reverseengineering.stackexchange.com/questions/8829/cross-debugging-for-mips-elf-with-qemu-toolchain)
-- [\[CB16\] House of Einherjar — Yet Another Heap Exploitation Technique on GLIBC by Hiroki Matsukuma](https://www.slideshare.net/codeblue_jp/cb16-matsukuma-en-68459606)
-- [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
-- [ELF Binary Code Injection, Loader/'Decrypter'](http://www.pinkstyle.org/elfcrypt.html)
-- [Endpoint Security Self-Protection on MacOS &#8211; MDSec](https://www.mdsec.co.uk/2018/08/endpoint-security-self-protection-on-macos/)
-- [Exploiting Format String Vulnerabilities](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
-- [Frag Grenade! A Remote Code Execution Vulnerability in the Steam Client](https://www.contextis.com/blog/frag-grenade-a-remote-code-execution-vulnerability-in-the-steam-client)
-- [FrizN - glibc - From Heap to RIP](https://blog.frizn.fr/glibc/glibc-heap-to-rip)
-- [Fully undetectable backdooring PE files](https://haiderm.com/fully-undetectable-backdooring-pe-files/)
-- [Fuzzing arbitrary functions in ELF binaries - Blah Cats](https://blahcat.github.io/2018/03/11/fuzzing-arbitrary-functions-in-elf-binaries/)
-- [Fuzzing Counter-Strike: Global Offensive maps files with AFL](https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp)
-- [Fuzzing workflows; a fuzz job from start to finish](https://foxglovesecurity.com/2016/03/15/fuzzing-workflows-a-fuzz-job-from-start-to-finish/)
-- [Game hacking reinvented? – A cod exploit](https://momo5502.com/blog/?p=34)
-- [GLIBC MALLOC FOR EXPLOITERS](https://yannayl.github.io/glibc_malloc_for_exploiters/)
-- [GOT and PLT for pwning.](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
-- [Hardening C/C++ Programs Part II &#8211; Executable-Space Protection and ASLR &#8211; Productive C++](http://www.productive-cpp.com/hardening-cpp-programs-executable-space-protection-address-space-layout-randomization-aslr/)
-- [Heap Exploitation](https://heap-exploitation.dhavalkapil.com/)
-- [Hiding content from Git + more on escape sequences \| TwistlockLabs Experiment](https://www.twistlock.com/2017/12/13/hiding-content-git-escape-sequence-twistlock-labs-experiment/)
-- [How main() is executed on Linux](http://www.tldp.org/LDP/LG/issue84/hawk.html)
-- [How programs get run: ELF binaries](https://lwn.net/Articles/631631/)
-- [How to Create a Virus Using the Assembly Language](https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/)
-- [Injecting missing methods at runtime \| Hopper Disassembler](https://www.hopperapp.com/blog/?p=219)
-- [Introduction to Reverse Engineering Cocoa Applications \| FireEye Inc](https://www.fireeye.com/blog/threat-research/2017/03/introduction_to_reve.html)
-- [iOS Security](https://www.apple.com/business/docs/iOS_Security_Guide.pdf)
-- [Ivan Fratric's Security Blog: So you want to work in security? (and for some reason ended up here rather than reading other people&#8217;s posts on the topic).](https://ifsec.blogspot.it/2018/02/so-you-want-to-work-in-security-and-for.html)
-- [Keygenning with KLEE](https://doar-e.github.io/blog/2015/08/18/keygenning-with-klee/)
-- [ldd arbitrary code execution](http://www.catonmat.net/blog/ldd-arbitrary-code-execution/)
-- [Linux x86 Program Start Up](http://dbp-consulting.com/tutorials/debugging/linuxProgramStartup.html)
-- [linux-insides](https://0xax.gitbooks.io/linux-insides/)
-- [macOS Security and Privacy Guide](https://github.com/drduh/macOS-Security-and-Privacy-Guide)
-- [Making a low level (Linux) debugger, part 3: our first program](https://blog.asrpo.com/making_a_low_level_debugger_part_3)
-- [Memory Corruption Attacks: The (almost) Complete History](https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf)
-- [New bypass and protection techniques for ASLR on Linux](http://blog.ptsecurity.com/2018/02/new-bypass-and-protection-techniques.html)
-- [Overcoming (some) Spectre browser mitigations](https://alephsecurity.com/2018/06/26/spectre-browser-query-cache/)
-- [Playing with canaries](https://www.elttam.com.au/blog/playing-with-canaries/)
-- [Push the Red Button: Fuzzing with AFL is an Art](https://moyix.blogspot.com/2016/07/fuzzing-with-afl-is-an-art.html)
-- [Pwning coworkers thanks to LaTeX](https://scumjr.github.io/2016/11/28/pwning-coworkers-thanks-to-latex/)
-- [Qualys Security Advisory - The Stack Clash](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
-- [Radare2 of the Lost Magic Gadget](https://0xabe.io/howto/exploit/2016/03/30/Radare2-of-the-Lost-Magic-Gadget.html)
-- [Recommended compiler and linker flags for GCC](https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc/)
-- [Replacing x86 firmware with Linux and Go](https://lwn.net/SubscriberLink/738649/81007748bf15c1e5/)
-- [Return to VDSO using ELF Auxiliary Vectors](http://v0ids3curity.blogspot.it/2014/12/return-to-vdso-using-elf-auxiliary.html)
-- [Reversing C++ programs with IDA pro and Hex-rays](https://blog.0xbadc0de.be/archives/67)
-- [secfigo/Awesome-Fuzzing: A curated list of fuzzing resources ( Books, courses - free and paid, videos, tools, tutorials and vulnerable applications to practice on ) for learning Fuzzing and initial phases of Exploit Development like root cause analysis.](https://github.com/secfigo/Awesome-Fuzzing)
-- [Siguza/ios-resources: Useful resources for iOS hacking](https://github.com/Siguza/ios-resources)
-- [Some universal gadget sequence for Linux x86_64 ROP payload](https://v0ids3curity.blogspot.it/2013/07/some-gadget-sequence-for-x8664-rop.html)
-- [Tearing apart printf()](http://www.maizure.org/projects/printf/index.html)
-- [Technical aspects of CTF contest organization - CERT Polska](https://www.cert.pl/en/news/single/technical-aspects-of-ctf-contest-organization/)
-- [The Art Of ELF: Analysis and Exploitations](http://fluxius.handgrep.se/2011/10/20/the-art-of-elf-analysises-and-exploitations/)
-- [The Chakra Exploit And The Limitations Of Modern Cyber Security Threat Mitigation Techniques](https://www.endgame.com/blog/technical-blog/chakra-exploit-and-limitations-modern-mitigation-techniques)
-- [The hacker known as "Alex" — Operation Luigi: How I hacked my friend without her noticing](https://defaultnamehere.tumblr.com/post/163734466355/operation-luigi-how-i-hacked-my-friend-without)
-- [The one-gadget in glibc](https://david942j.blogspot.it/2017/02/project-one-gadget-in-glibc.html)
-- [The real power of Linux executables](https://ownyourbits.com/2018/05/23/the-real-power-of-linux-executables/)
-- [Understanding L1 Terminal Fault aka Foreshadow: What you need to know](https://www.redhat.com/en/blog/understanding-l1-terminal-fault-aka-foreshadow-what-you-need-know)
-- [Unix ELF parasites and virus](http://vxheaven.org/lib/vsc01.html)
-- [UNIX Syscalls](https://john-millikin.com/unix-syscalls)
-- [Welcome to the New Order: A DEF CON 2018 Retrospective](https://dttw.tech/posts/Hka91N-IQ)
-- [What are vdso and vsyscall?](https://stackoverflow.com/questions/19938324/what-are-vdso-and-vsyscall)
-- [What is the difference between .got and .got.plt section?](https://stackoverflow.com/questions/11676472/what-is-the-difference-between-got-and-got-plt-section)
-- [What is this protection that seems to prevent ROP when ASLR in ON?](https://reverseengineering.stackexchange.com/questions/13811/what-is-this-protection-that-seems-to-prevent-rop-when-aslr-in-on)
-
-## Exploits
-- [aPAColypse now: Exploiting Windows 10 in a Local Network with WPAD/PAC and JScript](https://googleprojectzero.blogspot.it/2017/12/apacolypse-now-exploiting-windows-10-in_18.html)
-- [AnC - VUSec](https://www.vusec.net/projects/anc/) • ASLR⊕Cache
-- [ArmisSecurity/blueborne: PoC scripts demonstrating the BlueBorne vulnerabilities](https://github.com/ArmisSecurity/blueborne)
-- [Attacking a co-hosted VM: A hacker, a hammer and two memory modules - This is Security :: by Stormshield](https://thisissecurity.stormshield.com/2017/10/19/attacking-co-hosted-vm-hacker-hammer-two-memory-modules/)
-- [Avast Antivirus: Remote Stack Buffer Overflow with Magic Numbers](https://landave.io/2017/06/avast-antivirus-remote-stack-buffer-overflow-with-magic-numbers/)
-- [Back to 28: Grub2 Authentication 0-Day](http://hmarco.org/bugs/CVE-2015-8370-Grub2-authentication-bypass.html)
-- [Better slow than sorry – VirtualBox 3D acceleration considered harmful](https://phoenhex.re/2018-07-27/better-slow-than-sorry)
-- [BlueBorne RCE on Android 6.0.1 (CVE-2017-0781) \[English\]](https://jesux.es/exploiting/blueborne-android-6.0.1-english/)
-- [Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets \| Exodus Intelligence](https://blog.exodusintel.com/2017/07/26/broadpwn/)
-- [Browser security beyond sandboxing &#8211; Windows Security blog](https://blogs.technet.microsoft.com/mmpc/2017/10/18/browser-security-beyond-sandboxing/)
-- ["Bypassing" Microsoft's Patch for CVE-2017-0199](http://justhaifei1.blogspot.it/2017/07/bypassing-microsofts-cve-2017-0199-patch.html?m=1)
-- [Cisco's Talos Intelligence Group Blog: Vulnerability Walkthrough: 7zip CVE-2016-2334 HFS+ Code Execution Vulnerability](http://blog.talosintelligence.com/2017/11/exploiting-cve-2016-2334.html)
-- [Coalfire-Research/iOS-11.1.2-15B202-Jailbreak](https://github.com/Coalfire-Research/iOS-11.1.2-15B202-Jailbreak/)
-- [CVE-2017-2636: exploit the race condition in the n_hdlc Linux kernel driver bypassing SMEP](https://a13xp0p0v.github.io/2017/03/24/CVE-2017-2636.html)
-- [CY-2017-011: Type Confusion in Adobe Acrobat](https://cybellum.com/cy-2017-011-type-confusion-in-adobe-acrobat/)
-- [Dirty COW and why lying is bad even if you are the Linux kernel](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
-- [Disabling MacOS SIP via a VirtualBox kext Vulnerability &#8211; MDSec](https://www.mdsec.co.uk/2018/08/disabling-macos-sip-via-a-virtualbox-kext-vulnerability/)
-- [Educational Heap Exploitation](https://github.com/shellphish/how2heap)
-- [elttam - Remote LD_PRELOAD Exploitation](https://www.elttam.com.au/blog/goahead/)
-- [Escaping Docker container using waitid() - CVE-2017-5123 \| Twistlock](https://www.twistlock.com/2017/12/27/escaping-docker-container-using-waitid-cve-2017-5123/)
-- [Exploit writing tutorial part 11 : Heap Spraying Demystified](https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/#0x0c0c0c0c)
-- [Exploiting CVE-2017-5123](https://reverse.put.as/2017/11/07/exploiting-cve-2017-5123/)
-- [Exploiting the DRAM rowhammer bug to gain kernel privileges](https://googleprojectzero.blogspot.it/2015/03/exploiting-dram-rowhammer-bug-to-gain.html)
-- [fail0verflow :: The First PS4 Kernel Exploit: Adieu](https://fail0verflow.com/blog/2017/ps4-namedobj-exploit/)
-- [Finding Function's Load Address](http://uaf.io/exploitation/misc/2016/04/02/Finding-Functions.html) • DT_STRTAB
-- [File Stream Pointer Overflows](http://www.ouah.org/fsp-overflows.txt)
-- [FILE Structure Exploitation ('vtable' check bypass)](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)
-- [Flash JIT – Spraying info leak gadgets](http://zhodiac.hispahack.com/my-stuff/security/Flash_Jit_InfoLeak_Gadgets.pdf)
-- [Fun with FORTIFY_SOURCE](http://vulnfactory.org/blog/2010/04/27/fun-with-fortify_source/)
-- [Fuzzing CS:GO BSP Files](https://blog.path.network/fuzzing-cs-go-bsp-files/)
-- [geohot presents an evasi0n7 writeup](http://geohot.com/e7writeup.html)
-- [“Huge Dirty COW” (CVE-2017–1000405)](https://medium.com/bindecy/huge-dirty-cow-cve-2017-1000405-110eca132de0)
-- [IAIK/meltdown: This repository contains several applications, demonstrating the Meltdown bug.](https://github.com/iaik/meltdown)
-- [IOHIDeous \| IOHIDFamily 0day](https://siguza.github.io/IOHIDeous/)
-- [Kernel Pool Overflow Exploitation In Real World – Windows 10 \| TRACKWATCH](http://trackwatch.com/kernel-pool-overflow-exploitation-in-real-world-windows-10/)
-- [kkamagui/linux-kernel-exploits: Linux kernel exploits for local privilege escalation](https://github.com/kkamagui/linux-kernel-exploits)
-- [Libc Realpath Buffer Underflow](https://www.halfdog.net/Security/2017/LibcRealpathBufferUnderflow/)
-- [Linux heap exploitation intro series: riding free on the heap – double free attacks!](https://sensepost.com/blog/2017/linux-heap-exploitation-intro-series-riding-free-on-the-heap-double-free-attacks/)
-- [Linux/x86 - sockfd trick + dup2(0,0), dup2(0,1), dup2(0,2) + execve /bin/sh - 50 bytes](http://shell-storm.org/shellcode/files/shellcode-881.php)
-- [Mental Snapshot - _int_free and unlink](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html) • free, heap, unlink
-- [Never-Ending Security: eBPF and Analysis of the get-rekt-linux-hardened.c Exploit for CVE-2017-16995](https://ricklarabee.blogspot.com/2018/07/ebpf-and-analysis-of-get-rekt-linux.html)
-- [Offset2lib: bypassing full ASLR on 64bit Linux](http://cybersecurity.upv.es/attacks/offset2lib/offset2lib.html)
-- [Play with FILE Structure - Yet Another Binary Exploit Technique](https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique)
-- [Playing with signals : An overview on Sigreturn Oriented Programming](https://thisissecurity.net/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
-- [Please Stop Naming Vulnerabilities: Exploring 6 Previously Unknown Remote Kernel Bugs Affecting Android Phones](https://pleasestopnamingvulnerabilities.com)
-- [Project Zero: Over The Air - Vol. 2, Pt. 1: Exploiting The Wi-Fi Stack on Apple Devices](https://googleprojectzero.blogspot.it/2017/09/over-air-vol-2-pt-1-exploiting-wi-fi.html)
-- [Pwn2Own: Safari sandbox part 1 – Mount yourself a root shell](https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc)
-- [Pwn2Own: Safari sandbox part 2 – Wrap your way around to root](https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape)
-- [Pwning (sometimes) with style - Dragons' notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf)
-- [pwnlib.dynelf — Resolving remote functions using leaks](https://docs.pwntools.com/en/stable/dynelf.html)
-- [Qualys Security Advisory - Buffer overflow in glibc's ld.so](http://seclists.org/fulldisclosure/2017/Dec/40)
-- [Reading privileged memory with a side-channel](https://googleprojectzero.blogspot.it/2018/01/reading-privileged-memory-with-side.html)
-- [SSD Advisory – VirtualBox VRDP Guest-to-Host Escape &#8211; SecuriTeam Blogs](https://blogs.securiteam.com/index.php/archives/3736)
-- [The info leak era on software exploitation](https://media.blackhat.com/bh-us-12/Briefings/Serna/BH_US_12_Serna_Leak_Era_Slides.pdf)
-- [v0rtex \| IOSurface exploit](https://siguza.github.io/v0rtex/)
-- [What is vulnerable about this C code?](http://stackoverflow.com/questions/8304396/what-is-vulnerable-about-this-c-code) • env
-- [x86 Exploitation 101: heap overflows… unlink me, would you please?](https://gbmaster.wordpress.com/2014/08/11/x86-exploitation-101-heap-overflows-unlink-me-would-you-please/) • dlmalloc, heap, unlink
-- [Xen SMEP (and SMAP) bypass](https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2015/april/xen-smep-and-smap-bypass/)
-- [xoreaxeaxeax/rosenbridge: Hardware backdoors in some x86 CPUs](https://github.com/xoreaxeaxeax/rosenbridge)
-- [Zero Day Initiative — Reading Backwards – Controlling an Integer Underflow in Adobe Reader](https://www.zerodayinitiative.com/blog/2017/12/18/reading-backwards-controlling-an-integer-underflow-in-adobe-reader)
-- [Zero Day Initiative — Use-After-Silence: Exploiting a quietly patched UAF in VMware](https://www.thezdi.com/blog/2017/6/26/use-after-silence-exploiting-a-quietly-patched-uaf-in-vmware)
-
-## Papers
-- [A Eulogy for Format Strings](http://phrack.org/issues/67/9.html) • Phrack
-- [ATtention Spanned: Comprehensive Vulnerability Analysis of AT Commands Within the Android Ecosystem](https://atcommands.org)
-- [Advanced Doug Lea's malloc exploits](http://phrack.org/issues/61/6.html) • Phrack
-- [Advances in format string exploitation](http://phrack.org/issues/59/7.html) • Phrack
+- [A binary analysis, count me if you can | shell-storm.org](http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/) • Pin
+- [A Eulogy for Format Strings | phrack.org](http://phrack.org/issues/67/9.html)
+- [A Memory Allocator | g.oswego.edu](http://g.oswego.edu/dl/html/malloc.html) • dlmalloc
+- [Advanced Doug Lea's malloc exploits | phrack.org](http://phrack.org/issues/61/6.html)
+- [Advances in format string exploitation | phrack.org](http://phrack.org/issues/59/7.html)
 - [AEG: Automatic Exploit Generation](http://security.ece.cmu.edu/aeg/aeg-current.pdf) • NDSS&nbsp;2011
+- [Almost booting an iOS kernel in QEMU | worthdoingbadly.com](https://worthdoingbadly.com/xnuqemu/)
+- [AnC | vusec.net](https://www.vusec.net/projects/anc/) • ASLR⊕Cache
 - [ASLR on the Line: Practical Cache Attacks on the MMU](http://www.cs.vu.nl/~herbertb/download/papers/anc_ndss17.pdf) • NDSS&nbsp;2017, ASLR⊕Cache
+- [ASLR Protection for Statically Linked Executables | leviathansecurity.com](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables) • ELF, RELRO
+- [Attacking a co-hosted VM: A hacker, a hammer and two memory modules | thisissecurity.stormshield.com](https://thisissecurity.stormshield.com/2017/10/19/attacking-co-hosted-vm-hacker-hammer-two-memory-modules/)
+- [ATtention Spanned: Comprehensive Vulnerability Analysis of AT Commands Within the Android Ecosystem | atcommands.org](https://atcommands.org)
+- [Awesome Fuzzing | github.com/secfigo](https://github.com/secfigo/Awesome-Fuzzing)
+- [Beware of strncpy() and strncat() | eklitzke.org](https://eklitzke.org/beware-of-strncpy-and-strncat)
+- [BlueBorne Information from the Research Team | armis.com](https://armis.com/blueborne/)
+- [Bot vs. Bot: Evading Machine Learning Malware Detection](https://www.blackhat.com/docs/us-17/thursday/us-17-Anderson-Bot-Vs-Bot-Evading-Machine-Learning-Malware-Detection.pdf) • Black Hat USA&nbsp;2017
+- [Broadpwn: Remotely Compromising Android and iOS via a Bug in Broadcom's Wi-Fi Chipsets | exodusintel.com](https://blog.exodusintel.com/2017/07/26/broadpwn/)
+- [Bypassing clang’s SafeStack for Fun and Profit](https://www.blackhat.com/docs/eu-16/materials/eu-16-Goktas-Bypassing-Clangs-SafeStack.pdf) • Black Hat Europe&nbsp;2016
+- [Cisco ASA series part four: dlmalloc-2.8.x, libdlmalloc, & dlmalloc on Cisco ASA | nccgroup.trust](https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/october/cisco-asa-series-part-four-dlmalloc-2.8.x-libdlmalloc-and-dlmalloc-on-cisco-asa/)
+- [Common Pitfalls When Writing Exploits | mathyvanhoef.com](http://www.mathyvanhoef.com/2012/11/common-pitfalls-when-writing-exploits.html)
+- [Controlling uninitialized memory with LD_PRELOAD | vulnfactory.org](http://vulnfactory.org/blog/2010/04/08/controlling-uninitialized-memory-with-ld_preload/)
+- [Cross debugging for MIPS ELF with QEMU/toolchain | reverseengineering.stackexchange.com](https://reverseengineering.stackexchange.com/questions/8829/cross-debugging-for-mips-elf-with-qemu-toolchain)
+- [Dirty COW and why lying is bad even if you are the Linux kernel | chao-tic.github.io](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
 - [Drammer: Deterministic Rowhammer Attacks on Mobile Platforms](https://vvdveen.com/publications/drammer.pdf) • CCS&nbsp;2016
-- [Flipping Bits in Memory Without Accessing Them: An Experimental Study of DRAM Disturbance Errors](https://users.ece.cmu.edu/~yoonguk/papers/kim-isca14.pdf) • ISCA&nbsp;2014
-- [Grand Pwning Unit: Accelerating Microarchitectural Attacks with the GPU](https://www.cs.vu.nl/~herbertb/download/papers/glitch_sp18.pdf)
+- [Dynamic Binary Instrumentation Primer | deniable.org](http://deniable.org/reversing/binary-instrumentation) • DynamoRIO, Frida, Pin
+- [Educational Heap Exploitation | github.com/shellphish](https://github.com/shellphish/how2heap)
+- [Effective file format fuzzing](https://www.blackhat.com/docs/eu-16/materials/eu-16-Jurczyk-Effective-File-Format-Fuzzing-Thoughts-Techniques-And-Results.pdf) • Black Hat Europe&nbsp;2016
+- [ELF Binary Code Injection, Loader/'Decrypter' | pinkstyle.org](http://www.pinkstyle.org/elfcrypt.html)
+- [Endpoint Security Self-Protection on MacOS | mdsec.co.uk](https://www.mdsec.co.uk/2018/08/endpoint-security-self-protection-on-macos/)
+- [Exploit writing tutorial part 11 : Heap Spraying Demystified | corelan.be](https://www.corelan.be/index.php/2011/12/31/exploit-writing-tutorial-part-11-heap-spraying-demystified/)
+- [Exploiting Format String Vulnerabilities | crypto.stanford.edu](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
+- [Exploiting the DRAM rowhammer bug to gain kernel privileges | googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html)
+- [Extra Exploitation Technique 1: _dl_open | dangokyo.me](https://dangokyo.me/2018/01/20/extra-exploitation-technique-1-_dl_open/)
+- [File Stream Pointer Overflows | ouah.org](http://www.ouah.org/fsp-overflows.txt)
+- [FILE Structure Exploitation ('vtable' check bypass) | dhavalkapil.com](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)
+- [Finding Function's Load Address | uaf.io](http://uaf.io/exploitation/misc/2016/04/02/Finding-Functions.html) • DT_STRTAB
+- [From Heap to RIP | frizn.fr](https://blog.frizn.fr/glibc/glibc-heap-to-rip) • dlmalloc, ptmalloc2
+- [Fully undetectable backdooring PE files | haiderm.com](https://haiderm.com/fully-undetectable-backdooring-pe-files/)
+- [Fun with FORTIFY_SOURCE | vulnfactory.org](http://vulnfactory.org/blog/2010/04/27/fun-with-fortify_source/)
+- [Fuzzing arbitrary functions in ELF binaries | blahcat.github.io](https://blahcat.github.io/2018/03/11/fuzzing-arbitrary-functions-in-elf-binaries/) • LIEF
+- [Fuzzing with AFL is an Art | moyix.blogspot.com](https://moyix.blogspot.com/2016/07/fuzzing-with-afl-is-an-art.html)
+- [Fuzzing workflows; a fuzz job from start to finish | foxglovesecurity.com](https://foxglovesecurity.com/2016/03/15/fuzzing-workflows-a-fuzz-job-from-start-to-finish/) • AFL
+- [GLIBC MALLOC FOR EXPLOITERS | yannayl.github.io](https://yannayl.github.io/glibc_malloc_for_exploiters/)
+- [GOT and PLT for pwning. | systemoverlord.com](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
+- [Grand Pwning Unit: Accelerating Microarchitectural Attacks with the GPU | cs.vu.nl](https://www.cs.vu.nl/~herbertb/download/papers/glitch_sp18.pdf)
+- [Hacking a game to learn FRIDA basics (Pwn Adventure 3) | x-c3ll.github.io](https://x-c3ll.github.io/posts/Frida-Pwn-Adventure-3/)
 - [Hacking Blind](http://www.scs.stanford.edu/brop/bittau-brop.pdf) • S&P&nbsp;2014, BROP
+- [Hardening C/C++ Programs Part II – Executable-Space Protection and ASLR | productive-cpp.com](http://www.productive-cpp.com/hardening-cpp-programs-executable-space-protection-address-space-layout-randomization-aslr/)
+- [Heap Exploitation | dhavalkapil.com](https://heap-exploitation.dhavalkapil.com/)
+- [Heap Feng Shui in JavaScript](https://www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf) • Black Hat Europe&nbsp;2007
+- [House of Einherjar — Yet Another Heap Exploitation Technique on GLIBC](https://www.slideshare.net/codeblue_jp/cb16-matsukuma-en-68459606) • CODE BLUE&nbsp;2016
+- [How main() is executed on Linux | tldp.org](http://www.tldp.org/LDP/LG/issue84/hawk.html)
+- [How programs get run: ELF binaries | lwn.net](https://lwn.net/Articles/631631/)
 - [How the ELF Ruined Christmas](https://www.usenix.org/system/files/conference/usenixsecurity15/sec15-paper-di-frederico.pdf) • USENIX&nbsp;2015, \_dl\_runtime\_resolve
+- [How to build a C program using a custom version of glibc and static linking? | stackoverflow.com](https://stackoverflow.com/questions/10763394/how-to-build-a-c-program-using-a-custom-version-of-glibc-and-static-linking/52454681#52454681)
+- [How to Create a Virus Using the Assembly Language | cranklin.wordpress.com](https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/) • ELF
+- [Injecting missing methods at runtime | hopperapp.com](https://www.hopperapp.com/blog/?p=219) • Mach-O
+- [iOS Hacking Resources | github.com/Siguza](https://github.com/Siguza/ios-resources)
+- [iOS kernel exploitation archaeology](https://media.ccc.de/v/34c3-8720-ios_kernel_exploitation_archaeology) • 34C3
 - [Jump Over ASLR: Attacking Branch Predictors to Bypass ASLR](http://www.cs.ucr.edu/~nael/pubs/micro16.pdf) • MICRO&nbsp;2016
+- [Keygenning with KLEE | doar-e.github.io](https://doar-e.github.io/blog/2015/08/18/keygenning-with-klee/)
+- [ldd arbitrary code execution | catonmat.net](http://www.catonmat.net/blog/ldd-arbitrary-code-execution/)
+- [Learning KVM - implement your own Linux kernel | david942j.blogspot.com](https://david942j.blogspot.com/2018/10/note-learning-kvm-implement-your-own.html)
+- [Linux x86 Program Start Up | dbp-consulting.com](http://dbp-consulting.com/tutorials/debugging/linuxProgramStartup.html)
+- [linux-insides | 0xax.gitbooks.io](https://0xax.gitbooks.io/linux-insides/)
+- [Linux/x86 - sockfd trick + dup2(0,0), dup2(0,1), dup2(0,2) + execve /bin/sh - 50 bytes | shell-storm.org](http://shell-storm.org/shellcode/files/shellcode-881.php)
+- [macOS Security and Privacy Guide | github.com/drduh](https://github.com/drduh/macOS-Security-and-Privacy-Guide)
+- [Making a low level (Linux) debugger, part 3: our first program | asrpo.com](https://blog.asrpo.com/making_a_low_level_debugger_part_3)
+- [Meltdown and Spectre | meltdownattack.com](https://meltdownattack.com/)
+- [Memory Corruption Attacks: The (almost) Complete History](https://media.blackhat.com/bh-us-10/whitepapers/Meer/BlackHat-USA-2010-Meer-History-of-Memory-Corruption-Attacks-wp.pdf) • Black Hat USA&nbsp;2010
+- [Mental Snapshot - _int_free and unlink | uaf.io](http://uaf.io/exploitation/misc/2016/09/11/_int_free-Mental-Snapshot.html)
+- [Multiple glibc libraries on a single host | stackoverflow.com](https://stackoverflow.com/questions/847179/multiple-glibc-libraries-on-a-single-host)
+- [New bypass and protection techniques for ASLR on Linux | ptsecurity.com](http://blog.ptsecurity.com/2018/02/new-bypass-and-protection-techniques.html)
 - [On the Effectiveness of Address-Space Randomization](https://benpfaff.org/papers/asrandom.pdf) • CCS&nbsp;2004, ASLR
-- [On the Effectiveness of Full-ASLR on 64-bit Linux](http://cybersecurity.upv.es/attacks/offset2lib/offset2lib-paper.pdf) • DeepSec&nbsp;2014, offset2lib
-- [Once upon a free()...](http://phrack.org/issues/57/9.html) • Phrack
-- [Smashing The Stack For Fun And Profit](http://phrack.org/issues/49/14.html) • Phrack
-- [The advanced return-into-lib(c) exploits: PaX case study](http://phrack.org/issues/58/4.html) • Phrack, ret-into-dl
-- [The Malloc Maleficarum](http://phrack.org/issues/66/10.html) • Phrack
-- [Vudo - An object superstitiously believed to embody magical powers](http://www.phrack.org/issues/57/8.html) • Phrack, dlmalloc, frontlink, unlink
+- [On vsyscalls and the vDSO | lwn.net](https://lwn.net/Articles/446528/)
+- [Once upon a free()... | phrack.org](http://phrack.org/issues/57/9.html)
+- [Overcoming (some) Spectre browser mitigations | alephsecurity.com](https://alephsecurity.com/2018/06/26/spectre-browser-query-cache/)
+- [FILE Structures: Another Binary Exploitation Technique](https://gsec.hitb.org/materials/sg2018/D1%20-%20FILE%20Structures%20-%20Another%20Binary%20Exploitation%20Technique%20-%20An-Jie%20Yang.pdf) • HITB GSEC&nbsp;2018
+- [Playing with canaries | elttam.com.au](https://www.elttam.com.au/blog/playing-with-canaries/)
+- [Playing with signals : An overview on Sigreturn Oriented Programming | thisissecurity.stormshield.com](https://thisissecurity.stormshield.com/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
+- [Practical C++ Decompilation](http://www.hexblog.com/wp-content/uploads/2011/08/Recon-2011-Skochinsky.pdf) • REcon&nbsp;2011
+- [ptmalloc fanzine | tukan.farm](http://tukan.farm/2016/07/26/ptmalloc-fanzine/)
+- [Pwning (sometimes) with style - Dragons' notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf) • Insomni'hack&nbsp;2015
+- [Pwning coworkers thanks to LaTeX | scumjr.github.io](https://scumjr.github.io/2016/11/28/pwning-coworkers-thanks-to-latex/)
+- [pwnlib.dynelf — Resolving remote functions using leaks | pwntools.com](https://docs.pwntools.com/en/stable/dynelf.html)
+- [Radare2 of the Lost Magic Gadget | 0xabe.io](https://0xabe.io/howto/exploit/2016/03/30/Radare2-of-the-Lost-Magic-Gadget.html)
+- [Reading privileged memory with a side-channel | googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html)
+- [Recommended compiler and linker flags for GCC | redhat.com](https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc/)
+- [Return to VDSO using ELF Auxiliary Vectors | voidsecurity.in](https://www.voidsecurity.in/2014/12/return-to-vdso-using-elf-auxiliary.html)
+- [Reversing C++ programs with IDA pro and Hex-rays | 0xbadc0de.be](https://blog.0xbadc0de.be/archives/67)
+- [So you want to work in security? (and for some reason ended up here rather than reading other people’s posts on the topic). | ifsec.blogspot.com](https://ifsec.blogspot.com/2018/02/so-you-want-to-work-in-security-and-for.html)
+- [Some universal gadget sequence for Linux x86_64 ROP payload | voidsecurity.in](https://www.voidsecurity.in/2013/07/some-gadget-sequence-for-x8664-rop.html)
+- [Smashing The Stack For Fun And Profit | phrack.org](http://phrack.org/issues/49/14.html)
+- [Tearing apart printf() | maizure.org](http://www.maizure.org/projects/printf/index.html)
+- [Technical aspects of CTF contest organization| cert.pl](https://www.cert.pl/en/news/single/technical-aspects-of-ctf-contest-organization/)
+- [The advanced return-into-lib(c) exploits: PaX case study | phrack.org](http://phrack.org/issues/58/4.html) • ret-into-dl
+- [The Malloc Maleficarum | phrack.org](http://phrack.org/issues/66/10.html)
+- [The one-gadget in glibc | david942j.blogspot.com](https://david942j.blogspot.com/2017/02/project-one-gadget-in-glibc.html)
+- [The real power of Linux executables | ownyourbits.com](https://ownyourbits.com/2018/05/23/the-real-power-of-linux-executables/)
+- [The Stack Clash | qualys.com](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
+- [Understanding L1 Terminal Fault aka Foreshadow: What you need to know | redhat.com](https://www.redhat.com/en/blog/understanding-l1-terminal-fault-aka-foreshadow-what-you-need-know)
+- [UNIX Syscalls | john-millikin.com](https://john-millikin.com/unix-syscalls)
+- [Vudo - An object superstitiously believed to embody magical powers | phrack.org](http://www.phrack.org/issues/57/8.html)
+
 
 ## Talks/Presentations
 - [$hell on Earth: From Browser to System Compromise](https://www.youtube.com/watch?v=7wIiqqgDWdQ) • Black Hat USA&nbsp;2016
 - [Attacking The XNU Kernel In El Capitan](https://www.youtube.com/watch?v=k550C0V79ts) • Black Hat Europe&nbsp;2015
 - [Behind the Scenes with iOS Security](https://www.youtube.com/watch?v=BLGFriOKz6U) • Black Hat USA&nbsp;2016
-- [Bot vs. Bot: Evading Machine Learning Malware Detection](https://www.blackhat.com/docs/us-17/thursday/us-17-Anderson-Bot-Vs-Bot-Evading-Machine-Learning-Malware-Detection.pdf) • Black Hat USA&nbsp;2017
 - [Breaking the x86 Instruction Set](https://www.youtube.com/watch?v=KrksBdWcZgQ) • Black Hat USA&nbsp;2017
-- [Bypassing clang’s SafeStack for Fun and Profit](https://www.blackhat.com/docs/eu-16/materials/eu-16-Goktas-Bypassing-Clangs-SafeStack.pdf) • Black Hat Europe&nbsp;2016
-- [Effective file format fuzzing](https://www.blackhat.com/docs/eu-16/materials/eu-16-Jurczyk-Effective-File-Format-Fuzzing-Thoughts-Techniques-And-Results.pdf) by j00ru • Black Hat Europe&nbsp;2016
 - [Fixing/Making Holes in Binaries](https://www.youtube.com/watch?v=18DKETYfvjg) • Black Hat USA&nbsp;2002
-- [Heap Feng Shui in JavaScript](https://www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf) • Black Hat Europe&nbsp;2007
-- [Infosec and failure](https://www.youtube.com/watch?v=erZ2JlfTtcE) by 杏👼Ąż • Hack.lu&nbsp;2017
-- [iOS kernel exploitation archaeology](https://media.ccc.de/v/34c3-8720-ios_kernel_exploitation_archaeology) by argp • 34C3
-- [Linux Vulnerabilities Windows Exploits: Escalating Privileges with WSL](https://www.youtube.com/watch?v=3deJvbBHET4) by Saar Amar • BlueHat&nbsp;IL&nbsp;2018
-- [Machine learning, offense, and the future of automation](https://www.youtube.com/watch?v=BWFdxAG_TGk) by halvarflake • ZeroNights&nbsp;2017
-- [Practical C++ Decompilation](http://www.hexblog.com/wp-content/uploads/2011/08/Recon-2011-Skochinsky.pdf) • REcon&nbsp;2011
-- [Pwned By The Owner: What Happens When You Steal A Hacker's Computer](https://www.youtube.com/watch?v=Jwpg-AwJ0Jc) by Zoz • DEF&nbsp;CON&nbsp;18
-- [return-to-csu: A New Method to Bypass 64-bit Linux ASLR](https://www.blackhat.com/docs/asia-18/asia-18-Marco-return-to-csu-a-new-method-to-bypass-the-64-bit-Linux-ASLR-wp.pdf) • Black Hat Asia&nbsp;2018
-- [Unexpected Stories From a Hacker Inside the Government](https://www.youtube.com/watch?v=TSR-b9yuTbM) by Mudge • DEF&nbsp;CON&nbsp;21
-
-## Write-ups
-- [0ctf Quals 2017 - BabyHeap2017](http://uaf.io/exploitation/2017/03/19/0ctf-Quals-2017-BabyHeap2017.html) • fastbins
-- [33C3 CTF – babyfengshui](https://galhacktictrendsetters.wordpress.com/2017/01/05/33c3-ctf-babyfengshui/)
-- [c00kies@venice - FAUST CTF 2017 Write-Up: Alexa](https://secgroup.github.io/2017/05/29/faustctf2017-writeup-alexa/)
-- [c00kies@venice - Google CTF 2017 (Quals) Write-Up: Inst Prof](https://secgroup.github.io/2017/06/22/googlectf2017quals-writeup-inst-prof/)
-- [CSAW '17 PWN - Auir (200pt)](https://glennmcgui.re/csaw-17-auir/)
-- [CSAW 2017 Finals - kws2](http://s3.eurecom.fr/nops/2018-01-24-csaw-2107-kws2.html)
-- [CSAW Quals 2017 FuntimeJS - RPISEC Blog](https://blog.rpis.ec/2017/09/csaw-quals-2017-funtimejs.html)
-- [CSAW Quals 2017: Zone Writeup](https://amritabi0s.wordpress.com/2017/09/18/csaw-quals-2017-zone-writeup/)
-- [\[DEFCON 2018\] Doublethink &#8211; 8-Architecture Assembly Polyglot &#8211; Robert Xiao](https://www.robertxiao.ca/hacking/defcon2018-assembly-polyglot/)
-- [Dragon Sector: Pwn2Win 2017 - Shift Register](http://blog.dragonsector.pl/2017/10/pwn2win-2017-shift-register.html)
-- [Exploit Exercise - Format String FORTIFY_SOURCE Bypass](http://v0ids3curity.blogspot.it/2012/09/exploit-exercise-format-string.html) • FORTIFY_SOURCE
-- [exploit exercises - protostar - heap levels \| research \| sprawl](http://thesprawl.org/research/exploit-exercises-protostar-heap/#heap-3)
-- [Hack.lu's OREO with ret2dl-resolve](http://wapiflapi.github.io/2014/11/17/hacklu-oreo-with-ret2dl-resolve/)
-- [Heap Exploitation ~ Fastbin Attack](https://0x00sec.org/t/heap-exploitation-fastbin-attack/3627)
-- [Hitcon2017CTF - 家徒四壁~Everlasting Imaginative Void~](http://pwning.fun//writeup/2017/11/03/HitconCTF2017-Everlasting-Imaginative-Void.html)
-- [Hohoho](https://github.com/InfoSecIITR/write-ups/tree/master/2016/33c3-ctf-2016/misc/hohoho) • bash
-- [HXP CTF 2017 - Writeup](https://pwning.re/2017/11/19/hxp-flag-store/) • FORTIFY_SOURCE, seccomp
-- [Nebula level15 write-up](http://www.pwntester.com/blog/2013/11/26/nebula-level15-write-up/) • RPATH
-- [\[Official Write-up\] HITCON CTF 2017 - pwn327 Real Ruby Escaping](https://david942j.blogspot.it/2017/11/official-write-up-hitcon-ctf-2017.html)
-- [Play With Capture The Flag: [Write-up] Google CTF 2017 - pwn474 primary](https://david942j.blogspot.it/2017/06/write-up-google-ctf-2017-pwn474-primary.html)
-- [RingZer0Team - Shellcoding](https://github.com/VulnHub/ctf-writeups/blob/master/2015/ringzer0/shellcoding.md)
-- [seadog007/noxCTF-2018-PSRF-as-Pwn](https://github.com/seadog007/noxCTF-2018-PSRF-as-Pwn) • SSRF
-- [Tokyo Westerns MMA 2016 - Diary](http://uaf.io/exploitation/2016/09/06/TokyoWesterns-MMA-Diary.html) • seccomp
+- [Infosec and failure](https://www.youtube.com/watch?v=erZ2JlfTtcE) • Hack.lu&nbsp;2017
+- [Linux Vulnerabilities Windows Exploits: Escalating Privileges with WSL](https://www.youtube.com/watch?v=3deJvbBHET4) • BlueHat&nbsp;IL&nbsp;2018
+- [Machine learning, offense, and the future of automation](https://www.youtube.com/watch?v=BWFdxAG_TGk) • ZeroNights&nbsp;2017
+- [Pwned By The Owner: What Happens When You Steal A Hacker's Computer](https://www.youtube.com/watch?v=Jwpg-AwJ0Jc) • DEF&nbsp;CON&nbsp;18
+- [Unexpected Stories From a Hacker Inside the Government](https://www.youtube.com/watch?v=TSR-b9yuTbM) • DEF&nbsp;CON&nbsp;21
+- [Unlocking secrets of proprietary software using Frida](https://www.youtube.com/watch?v=QC2jQI7GLus) • NDC&nbsp;2018
