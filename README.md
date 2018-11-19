@@ -3,13 +3,16 @@ This repository contains my solutions to some CTF challenges and a list of inter
 
 
 ## Write-Ups/PoCs
+- [365 Days Later: Finding and Exploiting Safari Bugs using Publicly Available Tools | googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2018/10/365-days-later-finding-and-exploiting.html) • fuzzing
 - [7zip CVE-2016-2334 HFS+ Code Execution Vulnerability | talosintelligence.com](http://blog.talosintelligence.com/2017/11/exploiting-cve-2016-2334.html)
+- [A cache invalidation bug in Linux memory management | googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2018/09/a-cache-invalidation-bug-in-linux.html)
 - [A Methodical Approach to Browser Exploitation | blog.ret2.io](https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/)
     - [Vulnerability Discovery Against Apple Safari | blog.ret2.io](https://blog.ret2.io/2018/06/13/pwn2own-2018-vulnerability-discovery/)
     - [Timeless Debugging of Complex Software | blog.ret2.io](https://blog.ret2.io/2018/06/19/pwn2own-2018-root-cause-analysis/)
     - [Weaponization of a JavaScriptCore Vulnerability | blog.ret2.io](https://blog.ret2.io/2018/07/11/pwn2own-2018-jsc-exploit/)
     - [Cracking the Walls of the Safari Sandbox | blog.ret2.io](https://blog.ret2.io/2018/07/25/pwn2own-2018-safari-sandbox/) • Frida, fuzzing
     - [Exploiting the macOS WindowServer for root | blog.ret2.io](https://blog.ret2.io/2018/08/28/pwn2own-2018-sandbox-escape/) • Frida
+- [A Story About Three Bluetooth Vulnerabilities in Android](https://blog.quarkslab.com/a-story-about-three-bluetooth-vulnerabilities-in-android.html)
 - [All Your Docs Are Belong To Us › reversing an av engine to compose signatures capable of detecting classified documents | objective-see.com](https://objective-see.com/blog/blog_0x22.html)
 - [Avast Antivirus: Remote Stack Buffer Overflow with Magic Numbers | landave.io](https://landave.io/2017/06/avast-antivirus-remote-stack-buffer-overflow-with-magic-numbers/)
 - [Back to 28: Grub2 Authentication 0-Day | hmarco.org](http://hmarco.org/bugs/CVE-2015-8370-Grub2-authentication-bypass.html)
@@ -21,12 +24,14 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Exploiting CVE-2017-5123 | reverse.put.as](https://reverse.put.as/2017/11/07/exploiting-cve-2017-5123/)
 - [Exploring 6 Previously Unknown Remote Kernel Bugs Affecting Android Phones | pleasestopnamingvulnerabilities.com](https://pleasestopnamingvulnerabilities.com)
 - [Frag Grenade! A Remote Code Execution Vulnerability in the Steam Client | contextis.com](https://www.contextis.com/blog/frag-grenade-a-remote-code-execution-vulnerability-in-the-steam-client)
+- [From fuzzing Apache httpd server to CVE-2017-7668 and a $1500 bounty](https://animal0day.blogspot.com/2017/07/from-fuzzing-apache-httpd-server-to-cve.html) • AFL, rr, valgrind
 - [Fuzzing Counter-Strike: Global Offensive maps files with AFL | phoenhex.re](https://phoenhex.re/2018-08-26/csgo-fuzzing-bsp)
 - [Fuzzing CS:GO BSP Files | path.network](https://blog.path.network/fuzzing-cs-go-bsp-files/)
 - [Game hacking reinvented? – A cod exploit | momo5502.com](https://momo5502.com/blog/?p=34)
 - [geohot presents an evasi0n7 writeup | geohot.com](http://geohot.com/e7writeup.html)
 - [IOHIDeous | IOHIDFamily 0day | siguza.github.io](https://siguza.github.io/IOHIDeous/)
 - [iOS 11 Jailbreak | github.com/Coalfire-Research](https://github.com/Coalfire-Research/iOS-11.1.2-15B202-Jailbreak/blob/master/iOS_jailbreak_writeup.pdf)
+- [Kernel RCE caused by buffer overflow in Apple's ICMP packet-handling code (CVE-2018-4407)](https://lgtm.com/blog/apple_xnu_icmp_error_CVE-2018-4407) • QL
 - [Meltdown Proof-of-Concept | github.com/iaik](https://github.com/iaik/meltdown)
 - [Pwn2Own: Safari sandbox part 1 – Mount yourself a root shell | phoenhex.re](https://phoenhex.re/2017-06-09/pwn2own-diskarbitrationd-privesc)
     - [Pwn2Own: Safari sandbox part 2 – Wrap your way around to root | phoenhex.re](https://phoenhex.re/2017-07-06/pwn2own-sandbox-escape)
@@ -85,6 +90,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Common Pitfalls When Writing Exploits | mathyvanhoef.com](http://www.mathyvanhoef.com/2012/11/common-pitfalls-when-writing-exploits.html)
 - [Controlling uninitialized memory with LD_PRELOAD | vulnfactory.org](http://vulnfactory.org/blog/2010/04/08/controlling-uninitialized-memory-with-ld_preload/)
 - [Cross debugging for MIPS ELF with QEMU/toolchain | reverseengineering.stackexchange.com](https://reverseengineering.stackexchange.com/questions/8829/cross-debugging-for-mips-elf-with-qemu-toolchain)
+- [Cyber Security Base](https://cybersecuritybase.mooc.fi/) • course
 - [Dirty COW and why lying is bad even if you are the Linux kernel | chao-tic.github.io](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
 - [Drammer: Deterministic Rowhammer Attacks on Mobile Platforms](https://vvdveen.com/publications/drammer.pdf) • CCS&nbsp;2016
 - [Dynamic Binary Instrumentation Primer | deniable.org](http://deniable.org/reversing/binary-instrumentation) • DynamoRIO, Frida, Pin
@@ -105,6 +111,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Fuzzing arbitrary functions in ELF binaries | blahcat.github.io](https://blahcat.github.io/2018/03/11/fuzzing-arbitrary-functions-in-elf-binaries/) • LIEF
 - [Fuzzing with AFL is an Art | moyix.blogspot.com](https://moyix.blogspot.com/2016/07/fuzzing-with-afl-is-an-art.html)
 - [Fuzzing workflows; a fuzz job from start to finish | foxglovesecurity.com](https://foxglovesecurity.com/2016/03/15/fuzzing-workflows-a-fuzz-job-from-start-to-finish/) • AFL
+- [Getting Physical: Extreme abuse of Intel based Paging Systems - Part 1](https://www.secureauth.com/blog/getting-physical-extreme-abuse-of-intel-based-paging-systems-part-1)
 - [GLIBC MALLOC FOR EXPLOITERS | yannayl.github.io](https://yannayl.github.io/glibc_malloc_for_exploiters/)
 - [GOT and PLT for pwning. | systemoverlord.com](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
 - [Grand Pwning Unit: Accelerating Microarchitectural Attacks with the GPU | cs.vu.nl](https://www.cs.vu.nl/~herbertb/download/papers/glitch_sp18.pdf)
@@ -144,6 +151,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Playing with canaries | elttam.com.au](https://www.elttam.com.au/blog/playing-with-canaries/)
 - [Playing with signals : An overview on Sigreturn Oriented Programming | thisissecurity.stormshield.com](https://thisissecurity.stormshield.com/2015/01/03/playing-with-signals-an-overview-on-sigreturn-oriented-programming/)
 - [Practical C++ Decompilation](http://www.hexblog.com/wp-content/uploads/2011/08/Recon-2011-Skochinsky.pdf) • REcon&nbsp;2011
+- [Programming Z3](http://theory.stanford.edu/~nikolaj/programmingz3.html)
 - [ptmalloc fanzine | tukan.farm](http://tukan.farm/2016/07/26/ptmalloc-fanzine/)
 - [Pwning (sometimes) with style - Dragons' notes on CTFs](http://j00ru.vexillium.org/slides/2015/insomnihack.pdf) • Insomni'hack&nbsp;2015
 - [Pwning coworkers thanks to LaTeX | scumjr.github.io](https://scumjr.github.io/2016/11/28/pwning-coworkers-thanks-to-latex/)
@@ -156,6 +164,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [So you want to work in security? (and for some reason ended up here rather than reading other people’s posts on the topic). | ifsec.blogspot.com](https://ifsec.blogspot.com/2018/02/so-you-want-to-work-in-security-and-for.html)
 - [Some universal gadget sequence for Linux x86_64 ROP payload | voidsecurity.in](https://www.voidsecurity.in/2013/07/some-gadget-sequence-for-x8664-rop.html)
 - [Smashing The Stack For Fun And Profit | phrack.org](http://phrack.org/issues/49/14.html)
+- [Symbolic Execution: Intuition and Implementation](http://www.usrsb.in/symbolic-execution-intuition-and-implementation.html)
 - [Tearing apart printf() | maizure.org](http://www.maizure.org/projects/printf/index.html)
 - [Technical aspects of CTF contest organization| cert.pl](https://www.cert.pl/en/news/single/technical-aspects-of-ctf-contest-organization/)
 - [The advanced return-into-lib(c) exploits: PaX case study | phrack.org](http://phrack.org/issues/58/4.html) • ret-into-dl
@@ -163,9 +172,12 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [The one-gadget in glibc | david942j.blogspot.com](https://david942j.blogspot.com/2017/02/project-one-gadget-in-glibc.html)
 - [The real power of Linux executables | ownyourbits.com](https://ownyourbits.com/2018/05/23/the-real-power-of-linux-executables/)
 - [The Stack Clash | qualys.com](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
+- [Transforming an ELF executable into a library](https://lief.quarkslab.com/doc/latest/tutorials/08_elf_bin2lib.html)
 - [Understanding L1 Terminal Fault aka Foreshadow: What you need to know | redhat.com](https://www.redhat.com/en/blog/understanding-l1-terminal-fault-aka-foreshadow-what-you-need-know)
 - [UNIX Syscalls | john-millikin.com](https://john-millikin.com/unix-syscalls)
 - [Vudo - An object superstitiously believed to embody magical powers | phrack.org](http://www.phrack.org/issues/57/8.html)
+- [Vulnerability hunting with Semmle QL, part 1](https://blogs.technet.microsoft.com/srd/2018/08/16/vulnerability-hunting-with-semmle-ql-part-1/)
+- [What is an ELF Export?](http://www.m4b.io/elf/export/binary/analysis/2015/05/25/what-is-an-elf-export.html)
 
 
 ## Talks/Presentations
@@ -173,6 +185,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Attacking The XNU Kernel In El Capitan](https://www.youtube.com/watch?v=k550C0V79ts) • Black Hat Europe&nbsp;2015
 - [Behind the Scenes with iOS Security](https://www.youtube.com/watch?v=BLGFriOKz6U) • Black Hat USA&nbsp;2016
 - [Breaking the x86 Instruction Set](https://www.youtube.com/watch?v=KrksBdWcZgQ) • Black Hat USA&nbsp;2017
+- [Browser bug hunting - Memoirs of a last man standing](https://vimeo.com/109380793) • 44CON&nbsp;2013
 - [Fixing/Making Holes in Binaries](https://www.youtube.com/watch?v=18DKETYfvjg) • Black Hat USA&nbsp;2002
 - [Infosec and failure](https://www.youtube.com/watch?v=erZ2JlfTtcE) • Hack.lu&nbsp;2017
 - [Linux Vulnerabilities Windows Exploits: Escalating Privileges with WSL](https://www.youtube.com/watch?v=3deJvbBHET4) • BlueHat&nbsp;IL&nbsp;2018
