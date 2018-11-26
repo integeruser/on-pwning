@@ -3,22 +3,20 @@
 from pwn import *
 
 context(arch='amd64', os='linux', aslr=True, terminal=['tmux', 'neww'])
-env = {
-    # 'LD_PRELOAD': './libc.so.6'
-}
+env = {}
 
 if args['GDB']:
     io = gdb.debug(
-        './ghost_in_the_heap.bin',
+        './ghost_in_the_heap.bin-amd64-2.24-9ubuntu2.2',
         env=env,
         gdbscript='''\
         set follow-fork-mode parent
         c
     ''')
-    elf, libc = io.elf, io.libc
+    elf, libc = io.elf, ELF('libs/amd64/2.24/9ubuntu2.2/libc-2.24.so')
 else:
-    io = process('./ghost_in_the_heap.bin', env=env)
-    elf, libc = io.elf, io.libc
+    io = process('./ghost_in_the_heap.bin-amd64-2.24-9ubuntu2.2', env=env)
+    elf, libc = io.elf, ELF('libs/amd64/2.24/9ubuntu2.2/libc-2.24.so')
 
 # thanks to https://github.com/scwuaptx/CTF/tree/master/2017-writeup/hitcon/ghost_in_the_heap
 

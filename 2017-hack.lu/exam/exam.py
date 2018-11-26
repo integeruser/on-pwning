@@ -2,19 +2,19 @@
 # -*- coding: utf-8 -*-
 from pwn import *
 
-context(arch='amd64', os='linux', aslr=False, terminal=['tmux', 'neww'])
+context(arch='amd64', os='linux', terminal=['tmux', 'neww'])
 
 if args['GDB']:
-    io = gdb.debug('./exam', gdbscript='''\
+    io = gdb.debug('./exam-amd64-2.23-0ubuntu9', gdbscript='''\
         c
     ''')
-    elf, libc = io.elf, io.libc
+    elf, libc = io.elf, ELF('libs/amd64/2.23/0ubuntu9/libc-2.23.so')
 elif args['REMOTE']:
     io = remote('flatearth.fluxfingers.net', 1745)
     elf, libc = ELF('./exam'), None
 else:
-    io = process('./exam')
-    elf, libc = io.elf, io.libc
+    io = process('./exam-amd64-2.23-0ubuntu9')
+    elf, libc = io.elf, ELF('libs/amd64/2.23/0ubuntu9/libc-2.23.so')
 
 
 def add_summary(data):

@@ -376,7 +376,7 @@ def delete_heap(index):
 
 
 binary = ELF("./baby_tcache-amd64-2.27-3ubuntu1")  # https://github.com/integeruser/bowkin
-libc = ELF("libs/amd64/3ubuntu1/libc-2.27.so")
+libc = ELF("libs/amd64/2.27/3ubuntu1/libc-2.27.so")
 
 # as said above, we need some bruteforcing
 with context.quiet:

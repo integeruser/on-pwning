@@ -10,10 +10,10 @@ if args['GDB']:
         set follow-fork-mode parent
         c
     ''')
-    elf, libc = io.elf, io.libc
+    elf, libc = io.elf, ELF('libs/amd64/2.26/0ubuntu2/libc-2.26.so')
 else:
-    io = process('./ragnarok.bin', env=env)
-    elf, libc = io.elf, io.libc
+    io = process('./ragnarok.bin-amd64-2.26-0ubuntu2', env=env)
+    elf, libc = io.elf, ELF('libs/amd64/2.26/0ubuntu2/libc-2.26.so')
 
 # thanks to https://gist.github.com/saelo/0c77ce6c2b84af70644d81802892c289
 

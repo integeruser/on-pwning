@@ -7,20 +7,20 @@ env = {'LD_PRELOAD': './libc.so.6'}
 
 if args['GDB']:
     io = gdb.debug(
-        './artifact',
+        './artifact-amd64-2.24-9ubuntu2.2',
         env=env,
         gdbscript='''\
         set follow-fork-mode parent
         b *0x555555554ba6
         c
     ''')
-    elf, libc = io.elf, io.libc
+    elf, libc = io.elf, ELF('libs/amd64/2.24/9ubuntu2.2/libc-2.24.so')
 elif args['REMOTE']:
     io = remote('52.192.178.153', 31337)
-    elf, libc = ELF('./artifact'), ELF('./libc.so.6')
+    elf, libc = ELF('./artifact'), ELF('libs/amd64/2.24/9ubuntu2.2/libc-2.24.so')
 else:
-    io = process('./artifact', env=env)
-    elf, libc = io.elf, io.libc
+    io = process('./artifact-amd64-2.24-9ubuntu2.2', env=env)
+    elf, libc = io.elf, ELF('libs/amd64/2.24/9ubuntu2.2/libc-2.24.so')
 
 # the binary allows reading and writing to arbitrary locations
 
