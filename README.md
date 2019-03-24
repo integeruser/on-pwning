@@ -126,10 +126,12 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [GLIBC MALLOC FOR EXPLOITERS | yannayl.github.io](https://yannayl.github.io/glibc_malloc_for_exploiters/)
 - [GOT and PLT for pwning. | systemoverlord.com](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
 - [Grand Pwning Unit: Accelerating Microarchitectural Attacks with the GPU | cs.vu.nl](https://www.cs.vu.nl/~herbertb/download/papers/glitch_sp18.pdf)
+- [GTFOBins | gtfobins.github.io](https://gtfobins.github.io/)
 - [Hacking a game to learn FRIDA basics (Pwn Adventure 3) | x-c3ll.github.io](https://x-c3ll.github.io/posts/Frida-Pwn-Adventure-3/)
 - [Hacking Blind](http://www.scs.stanford.edu/brop/bittau-brop.pdf) • S&P&nbsp;2014, BROP
 - [Hardening C/C++ Programs Part II – Executable-Space Protection and ASLR | productive-cpp.com](http://www.productive-cpp.com/hardening-cpp-programs-executable-space-protection-address-space-layout-randomization-aslr/)
 - [Hardening ELF binaries using Relocation Read-Only (RELRO) | redhat.com](https://www.redhat.com/en/blog/hardening-elf-binaries-using-relocation-read-only-relro)
+- [Hardware backdoors in some x86 CPUs | github.com/xoreaxeaxeax](https://github.com/xoreaxeaxeax/rosenbridge)
 - [Heap Exploitation | dhavalkapil.com](https://heap-exploitation.dhavalkapil.com/)
 - [Heap Feng Shui in JavaScript](https://www.blackhat.com/presentations/bh-europe-07/Sotirov/Presentation/bh-eu-07-sotirov-apr19.pdf) • Black Hat Europe&nbsp;2007
 - [House of Einherjar — Yet Another Heap Exploitation Technique on GLIBC](https://www.slideshare.net/codeblue_jp/cb16-matsukuma-en-68459606) • CODE BLUE&nbsp;2016
@@ -187,6 +189,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [The one-gadget in glibc | david942j.blogspot.com](https://david942j.blogspot.com/2017/02/project-one-gadget-in-glibc.html)
 - [The real power of Linux executables | ownyourbits.com](https://ownyourbits.com/2018/05/23/the-real-power-of-linux-executables/)
 - [The Stack Clash | qualys.com](https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt)
+- [The single instruction C compiler | github.com/xoreaxeaxeax](https://github.com/xoreaxeaxeax/movfuscator)
 - [Transforming an ELF executable into a library](https://lief.quarkslab.com/doc/latest/tutorials/08_elf_bin2lib.html)
 - [Understanding L1 Terminal Fault aka Foreshadow: What you need to know | redhat.com](https://www.redhat.com/en/blog/understanding-l1-terminal-fault-aka-foreshadow-what-you-need-know)
 - [UNIX Syscalls | john-millikin.com](https://john-millikin.com/unix-syscalls)
@@ -214,12 +217,43 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Unlocking secrets of proprietary software using Frida by Ole André Vadla Ravnås](https://www.youtube.com/watch?v=QC2jQI7GLus) • NDC&nbsp;2018
 - [Why Do Keynote Speakers Keep Suggesting That Improving Security Is Possible? by James Mickens](https://www.youtube.com/watch?v=ajGX7odA87k)
 
-
 ## Tools
-- [Buildroot](https://buildroot.org/) • compilation, toolchain
-- [crosstool-NG](https://crosstool-ng.github.io/) • compilation, toolchain
-- [OpenADK](https://openadk.org/) • compilation, toolchain
-- [xoreaxeaxeax/rosenbridge: Hardware backdoors in some x86 CPUs](https://github.com/xoreaxeaxeax/rosenbridge)
+- [AFL | lcamtuf.coredump.cx](http://lcamtuf.coredump.cx/afl/)
+- [angr | angr.io](http://angr.io/)
+- [BinNavi | github.com/google](https://github.com/google/binnavi)
+- [Bootlin | bootlin.com](https://elixir.bootlin.com/linux/latest/source)
+- [bowkin | github.com/integeruser](https://github.com/integeruser/bowkin)
+- [Buildroot | buildroot.org](https://buildroot.org/)
+- [cave_miner | github.com/Antonin-Deniau]()https://github.com/Antonin-Deniau/cave_miner
+- [Cling | cern.ch](https://root.cern.ch/cling)
+- [Compiler Explorer | godbolt.org](https://godbolt.org/)
+- [crashwalk | github.com/bnagy](https://github.com/bnagy/crashwalk)
+- [crosstool-NG | crosstool-ng.github.io](https://crosstool-ng.github.io/)
+- [dockcross | github.com/dockcross](https://github.com/dockcross/dockcross)
+- [Exodus | github.com/intoli](https://github.com/intoli/exodus)
+- [FLARE VM | github.com/fireeye](https://github.com/fireeye/flare-vm)
+- [Frida | frida.re](https://www.frida.re/)
+- [GEF | github.com/hugsy](https://github.com/hugsy/gef)
+- [ghidra | github.com/NationalSecurityAgency](https://github.com/NationalSecurityAgency/ghidra)
+- [HackSys Extreme Vulnerable Driver | github.com/hacksysteam](https://github.com/hacksysteam/HackSysExtremeVulnerableDriver)
+- [KLEE | klee.github.io](https://klee.github.io/)
+- [LIEF | github.com/lief-project](https://github.com/lief-project/LIEF)
+- [linux-kernel-module-cheat | github.com/cirosantilli](https://github.com/cirosantilli/linux-kernel-module-cheat)
+- [McSema | github.com/trailofbits](https://github.com/trailofbits/mcsema)
+- [ODA | onlinedisassembler.com](https://onlinedisassembler.com/odaweb/)
+- [one_gadget | github.com/david942j](https://github.com/david942j/one_gadget)
+- [patchelf | github.com/NixOS](https://github.com/NixOS/patchelf)
+- [preeny | github.com/zardus](https://github.com/zardus/preeny)
+- [pwndbg | github.com/pwndbg](https://github.com/pwndbg/pwndbg)
+- [pwnjs | github.com/theori-io](https://github.com/theori-io/pwnjs)
+- [PyREBox | github.com/Cisco-Talos](https://github.com/Cisco-Talos/pyrebox)
+- [QIRA | github.com/geohot](https://github.com/geohot/qira)
+- [RetDec | github.com/avast-tl](https://github.com/avast-tl/retdec)
+- [rr | rr-project.org](https://rr-project.org/)
+- [seccomp-tools | github.com/david942j](https://github.com/david942j/seccomp-tools)
+- [Villoc | github.com/wapiflapi](https://github.com/wapiflapi/villoc)
+- [Woboq | woboq.org](https://code.woboq.org/userspace/glibc/)
+- [Z3 | github.com/Z3Prover](https://github.com/Z3Prover/z3)
 
 #### IDA
 - [A list of IDA Plugins | github.com/onethawt](https://github.com/onethawt/idaplugins-list)
