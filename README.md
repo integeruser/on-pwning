@@ -44,6 +44,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Reading Backwards – Controlling an Integer Underflow in Adobe Reader | zerodayinitiative.com](https://www.zerodayinitiative.com/blog/2017/12/18/reading-backwards-controlling-an-integer-underflow-in-adobe-reader)
 - [Remote LD_PRELOAD Exploitation | elttam.com.au](https://www.elttam.com.au/blog/goahead/)
 - [System Down: A systemd-journald exploit | openwall.com](https://www.openwall.com/lists/oss-security/2019/01/09/3)
+- [Taking a page from the kernel's book: A TLB issue in mremap() | googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2019/01/taking-page-from-kernels-book-tlb-issue.html)
 - [The First PS4 Kernel Exploit: Adieu | fail0verflow.com](https://fail0verflow.com/blog/2017/ps4-namedobj-exploit/)
 - [v0rtex | IOSurface exploit | siguza.github.io/v0rtex](https://siguza.github.io/v0rtex/)
 - [VirtualBox VRDP Guest-to-Host Escape | securiteam.com](https://blogs.securiteam.com/index.php/archives/3736)
@@ -54,6 +55,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [0CTF 2017 Quals | BabyHeap2017 | uaf.io](http://uaf.io/exploitation/2017/03/19/0ctf-Quals-2017-BabyHeap2017.html)
 - [33C3 CTF 2016 | babyfengshui | galhacktictrendsetters.wordpress.com](https://galhacktictrendsetters.wordpress.com/2017/01/05/33c3-ctf-babyfengshui/)
 - [33C3 CTF 2016 | hohoho | github.com/InfoSecIITR](https://github.com/InfoSecIITR/write-ups/tree/master/2016/33c3-ctf-2016/misc/hohoho) • bash
+- [35C3 CTF 2018 | newphonewhodis | mhackeroni.it](https://mhackeroni.it/archive/2018/12/30/35c3ctf-newphonewhodis.html)
 - [Atredis BlackHat CTF 2018 | msreverseengineering.com](https://www.msreverseengineering.com/blog/2018/7/24/the-atredis-blackhat-2018-ctf-challenge)
 - [CSAW 2017 Finals | kws2 | s3.eurecom.fr](http://s3.eurecom.fr/nops/2018-01-24-csaw-2107-kws2.html)
 - [CSAW 2017 Quals | FuntimeJS | rpis.ec](https://blog.rpis.ec/2017/09/csaw-quals-2017-funtimejs.html)
@@ -83,6 +85,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Advances in format string exploitation | phrack.org](http://phrack.org/issues/59/7.html)
 - [AEG: Automatic Exploit Generation](http://security.ece.cmu.edu/aeg/aeg-current.pdf) • NDSS&nbsp;2011
 - [Almost booting an iOS kernel in QEMU | worthdoingbadly.com](https://worthdoingbadly.com/xnuqemu/)
+- [An updated collection of resources targeting browser-exploitation | github.com/m1ghtym0](https://github.com/m1ghtym0/browser-pwn)
 - [AnC | vusec.net](https://www.vusec.net/projects/anc/) • ASLR⊕Cache
 - [ASLR on the Line: Practical Cache Attacks on the MMU](http://www.cs.vu.nl/~herbertb/download/papers/anc_ndss17.pdf) • NDSS&nbsp;2017, ASLR⊕Cache
 - [ASLR Protection for Statically Linked Executables | leviathansecurity.com](https://www.leviathansecurity.com/blog/aslr-protection-for-statically-linked-executables) • ELF, RELRO
@@ -98,6 +101,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [Cisco ASA series part four: dlmalloc-2.8.x, libdlmalloc, & dlmalloc on Cisco ASA | nccgroup.trust](https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/october/cisco-asa-series-part-four-dlmalloc-2.8.x-libdlmalloc-and-dlmalloc-on-cisco-asa/)
 - [Common Pitfalls When Writing Exploits | mathyvanhoef.com](http://www.mathyvanhoef.com/2012/11/common-pitfalls-when-writing-exploits.html)
 - [Controlling uninitialized memory with LD_PRELOAD | vulnfactory.org](http://vulnfactory.org/blog/2010/04/08/controlling-uninitialized-memory-with-ld_preload/)
+- [CPU.fail | cpu.fail](https://cpu.fail/)
 - [Cross debugging for MIPS ELF with QEMU/toolchain | reverseengineering.stackexchange.com](https://reverseengineering.stackexchange.com/questions/8829/cross-debugging-for-mips-elf-with-qemu-toolchain)
 - [Cyber Security Base](https://cybersecuritybase.mooc.fi/) • course
 - [Dirty COW and why lying is bad even if you are the Linux kernel | chao-tic.github.io](https://chao-tic.github.io/blog/2017/05/24/dirty-cow)
@@ -181,6 +185,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [So you want to work in security? (and for some reason ended up here rather than reading other people’s posts on the topic). | ifsec.blogspot.com](https://ifsec.blogspot.com/2018/02/so-you-want-to-work-in-security-and-for.html)
 - [Some universal gadget sequence for Linux x86_64 ROP payload | voidsecurity.in](https://www.voidsecurity.in/2013/07/some-gadget-sequence-for-x8664-rop.html)
 - [Smashing The Stack For Fun And Profit | phrack.org](http://phrack.org/issues/49/14.html)
+- [Super Awesome Fuzzing, Part One | f-secure.com](https://labsblog.f-secure.com/2017/06/22/super-awesome-fuzzing-part-one/)
 - [Symbolic Execution: Intuition and Implementation](http://www.usrsb.in/symbolic-execution-intuition-and-implementation.html)
 - [Tearing apart printf() | maizure.org](http://www.maizure.org/projects/printf/index.html)
 - [Technical aspects of CTF contest organization| cert.pl](https://www.cert.pl/en/news/single/technical-aspects-of-ctf-contest-organization/)
@@ -198,8 +203,8 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [What is an ELF Export? | m4b.io](http://www.m4b.io/elf/export/binary/analysis/2015/05/25/what-is-an-elf-export.html)
 - [Why is My Perfectly Good Shellcode Not Working?: Cache Coherency on MIPS and ARM | senr.io](https://blog.senr.io/blog/why-is-my-perfectly-good-shellcode-not-working-cache-coherency-on-mips-and-arm)
 
-
 ## Talks/Presentations
+- [From Kernel to VMM by Jacob Torrey (@JacobTorrey)](https://www.youtube.com/watch?v=FSw8Ff1SFLM)
 - [$hell on Earth: From Browser to System Compromise by Matt Molinyawe, Jasiel Spelman, Abdul-Aziz Hariri and Joshua Smith](https://www.youtube.com/watch?v=7wIiqqgDWdQ) • Black Hat USA&nbsp;2016
 - [A Christmas Carol - The Spectres of the Past, Present, and Future by Moritz Lipp, Michael Schwarz, Daniel Gruss and Claudio Canella](https://www.youtube.com/watch?v=r5wtQBpRFsM) • 35C3
 - [Attacking The XNU Kernel In El Capitan by Luca Todesco (@qwertyoruiop)](https://www.youtube.com/watch?v=k550C0V79ts) • Black Hat Europe&nbsp;2015
@@ -242,6 +247,7 @@ This repository contains my solutions to some CTF challenges and a list of inter
 - [McSema | github.com/trailofbits](https://github.com/trailofbits/mcsema)
 - [ODA | onlinedisassembler.com](https://onlinedisassembler.com/odaweb/)
 - [one_gadget | github.com/david942j](https://github.com/david942j/one_gadget)
+- [osxcross | github.com/tpoechtrager](https://github.com/tpoechtrager/osxcross)
 - [patchelf | github.com/NixOS](https://github.com/NixOS/patchelf)
 - [preeny | github.com/zardus](https://github.com/zardus/preeny)
 - [pwndbg | github.com/pwndbg](https://github.com/pwndbg/pwndbg)
